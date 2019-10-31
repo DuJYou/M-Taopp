@@ -1,0 +1,42 @@
+<div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="info-box blue-bg">
+            <i class="fa fa-cloud-download"></i>
+            <div class="count">6679场</div>
+            <div class="title"><trans oldtip="Download" newtip="下载">电影</trans></div>
+          </div>
+          <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="info-box brown-bg">
+            <i class="icon_pin_alt"></i>
+            <div class="count">7.538家</div>
+            <div class="title"><trans oldtip="Purchased" newtip="购进">影院</trans></div>
+          </div>
+          <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="info-box green-bg">
+            <i class="fa fa-cubes"></i>
+            <div class="count">14260k</div>
+            <div class="title"><trans oldtip="Stock" newtip="股票" style="">今日票房</trans></div>
+          </div>
+          <!--/.info-box-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+          <div class="info-box dark-bg">
+            <i class="fa fa-thumbs-o-up"></i>
+            <div class="count">600场</div>
+            <div class="title"><trans oldtip="Order" newtip="命令" style="">最热</trans></div>
+          </div>
+          <!--/.info-box-->
+        </div>
+        <!--/.col-->
+
+
+      </div>
