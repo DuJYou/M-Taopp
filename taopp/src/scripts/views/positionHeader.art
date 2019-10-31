@@ -1,0 +1,7 @@
+<ul class="dz">
+    <li><a class="dzName">北京</a><span class="yo-ico citysj">&#xe612;</span> </li>
+  </ul>
+  <ul class="select">
+    <li class="hot-show">正在热映 </li>
+    <li class="about-show">即将上映 </li>
+  </ul>

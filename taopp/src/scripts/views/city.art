@@ -1,0 +1,42 @@
+<div class="citiesChoose">
+    <div id="locate" class="city-title">
+        定位城市
+    </div>
+    <div class="city-inline">
+        <div class="city-item">定位失败，请点击重试</div>
+    </div>
+    <div id="history" class="city-title">
+        最近访问城市
+    </div>
+    <div class="city-inline"><a href="">
+        <div class="city-item" data-cityID="1">
+            北京
+        </div></a>
+    </div>
+    <div id="hot" class="city-title">
+        热门城市
+    </div>
+    <div class="city-inline2">
+        {{each list.slice(0,11)}}
+        <a class="sort_b" href="">
+            <div class="city-item" data-cityID="{{$value.id}}">
+                {{$value.nm}}
+            </div>
+        </a>
+        {{/each}}
+
+    </div>
+    <div id="letter"></div>
+    <div class="sort_box">
+        {{each list}}
+        <div class="sort_list"><a class="sort_a" href="">
+                <div class="num_name" data-cityID="{{$value.id}}">{{$value.nm}}</div>
+            </a></div>
+        {{/each}}
+    </div>
+    <div class="initials">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+</div>

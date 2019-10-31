@@ -1,0 +1,134 @@
+.searchMain {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 32px;
+    .searchBun {
+        flex: none;
+        // z-index: 99;
+
+        position: relative;
+        box-sizing: border-box;
+        height: 32px;
+
+
+        .sslog {
+            position: absolute;
+
+            // margin-top: -7px;
+            height: 32px;
+            left: 10px;
+            line-height: 32px;
+        }
+
+        .ssk {
+            position: absolute;
+            left: 10%;
+            width: 70%;
+            line-height: 160%;
+            border: none;
+            font-size: .18125rem;
+            height: 32px;
+            background-color: transparent;
+        }
+
+        .fcancle {
+            position: absolute;
+            right: 10%;
+            padding-left: 4px;
+            font-size: 15px;
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+}
+
+.searchcont {
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+    top: 8%;
+    height: 100%;
+    h3 {
+        margin-left: 5px;
+    }
+    .c_list {
+        list-style: none;
+        margin: 20px 0;
+        border-bottom: 1px solid #e6e6e6;
+        padding-left: 15px;
+        // border-top: 1px solid #e6e6e6;
+        position: relative;
+
+        .searchCinema {
+            // margin-bottom: 10px;
+            background-color: #fff;
+            .searchsellPrice {
+                // position: absolute;
+                // right: 48%;
+                // top: 3px;
+    
+                font-size: 22px;
+                color: red;
+                white-space: nowrap;
+                margin-left: 10px;
+    
+                .yuan {
+                    font-size: 13px;
+                    color: #999;
+                }
+            }
+        }
+
+
+        .searchaddr {
+            top: -10%;
+            display: flex;
+            font-size: 13px;
+            color: #999;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+
+            .addr {
+                top: -10%;
+                flex: 4;
+                font-size: 13px;
+                color: #999;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+                @include ellipsis();
+            }
+                    .searchdistance {
+                        flex: 1;
+                        // position: absolute;
+                        // right: 48%;
+                        // top: 20px;
+                    }
+
+                }
+            .status {
+                .blueBorder1 {
+                    // display: block;
+                    border: #589daf solid .001rem;
+                    font-size: 13px;
+                    color: #589daf;
+                    padding: 1px;
+                    border-radius: 30;
+                }
+                .yellowBorder1 {
+                    // display: block;
+                    border: #f90 solid .001rem;
+                    font-size: 13px;
+                    color: #f90;
+                    padding: 1px;
+                }
+            }
+
+        
+    }
+
+}

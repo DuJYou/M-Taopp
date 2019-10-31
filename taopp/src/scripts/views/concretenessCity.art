@@ -1,0 +1,6 @@
+{{each region}}
+<div class="filter-item1" data-areaId="{{$value.id}}">
+    <p>{{$value.name}}</p>
+    <p>{{$value.count}}</p>
+</div>
+{{/each}}

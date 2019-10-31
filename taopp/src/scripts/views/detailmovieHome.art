@@ -1,0 +1,43 @@
+ <div class="movhome">
+
+     <div class="movie_box_t">
+         <div class="movie_img"><img src="{{list.img.replace(/w\.h/,'128.180')}}"></div>
+         <div class="movie_cont">
+             <p class="movie_cnm">{{list.nm}}</p>
+             <p class="movie_enm">{{list.enm}}</p>
+             <p class="movie_cla">{{list.cat}}</p>
+             <p class="movie_time">{{list.star}}</p>
+             <p class="movie_dayrime">{{list.pubDesc}}</p>
+            <div class="ynlook"> <div class="wantlook">❤想看</div>
+             <div class="nolook">☆看过</div></div>
+
+         </div>
+
+     </div>
+     <div class="WOM">
+         <p class="wom">口碑</p>
+         <div class="look-p"><span class="movie_people ">{{list.snum}}</span><span class="look">人想看</span></div>
+         <p class="welcome">ON1最受欢迎的</p>
+     </div>
+     <div class="shichang">时长101分钟，一刀未剪</div>
+     <div class="brief"><span class="jianjie">简介:</span><span class="zhengwen"> {{list.dra}}</span>
+     </div>
+     <div class="juz">剧照:</div>
+     <div class="jutiphoto">
+         <div class="swiper-container swiper-container3">
+             <div class="swiper-wrapper">
+                 {{each list.photos}}
+                 <div class="swiper-slide">
+                     <img class="ppp" src="{{$value.replace(/w\.h/,'128.180')}}">
+                 </div>
+                 {{/each}}
+             </div>
+         </div>
+     </div>
+    </div>
+    <div class="pinglun">
+        <div class="pl"><h4>评论：</h4></div>
+        <div class="geren">
+         <div><h5> 李某某：</h5></div>  <span>看到艾斯哭了！！！路飞的成长真是大有提升，打凯多有望了！！！路帝cp真心奈斯！！！笑点，泪点，热点！！！节奏一点不拖拉，全程高能，乌索普大神最佳辅助mvp！！！索隆又帅了！！！不过讲真的巴雷特是真的强！！！壮哉我大海贼！！！最激动人心的就是片尾的泪目！！！路飞笑容依然很自由！！！全明星阵容。10星推荐！！！送我上热门，海迷们！！！</span>
+        </div>
+    </div>

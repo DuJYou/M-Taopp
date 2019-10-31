@@ -1,0 +1,9 @@
+<div class="time">
+    <div class="swiper-container1">
+        <div class="swiper-wrapper a">
+            {{each movelist.shows}}
+            <div class="swiper-slide times">{{$value.dateShow}}</div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div id="headerList">
+    <div class="region"><span class="logo"><img src="http://gw.alicdn.com/tfs/TB1mKkzl9zqK1RjSZFpXXakSXXa-50-50.svg"
+                alt=""></span>
+        <div class="activeCity"> </div><span class="yo-ico citysj">&#xe612;</span>
+    </div>
+
+    <div class="allCityFont">全城<span class="yo-ico headerIconfont">&#xe601;</span></div>
+    <div class="allcity"  style="display: none;"></div>
+    
+    <div class="brands">品牌<span class="yo-ico headerIconfont">&#xe601;</span></div>
+    <div class="allbrand" style="display: none;"></div>
+    <div class="characteristic">特色<span class="yo-ico headerIconfont">&#xe601;</span></div>
+    <div class="characteristic-cont" style="display: none;"></div>
+    <div class="search"><span class="yo-ico">&#xe630;</span></div>
+</div>

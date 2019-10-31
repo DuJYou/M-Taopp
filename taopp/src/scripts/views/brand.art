@@ -1,0 +1,14 @@
+<div class="selector-mod1" type="area" style="top: 52px;">
+    <div class="selector-in">
+        <div class="filter-list-complex mall">
+            <div class="list-outer1" style="height: 375px;">
+                {{each brandL}}
+                <div class="CL" data-brandid="{{$value.id}}">
+                    <span class="brand-name">{{$value.name}}</span>
+                    <span class="brand-count">{{$value.count}}</span>
+                </div>
+                {{/each}}
+            </div>
+     
+        </div>
+    </div>

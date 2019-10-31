@@ -1,0 +1,110 @@
+.selector-mod2 {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  top: 100px; }
+  .selector-mod2 .selector-in-chara {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column; }
+    .selector-mod2 .selector-in-chara .filter-list-complex {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      font-size: 14px;
+      flex-direction: column; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .specialContent {
+        flex: 1;
+        width: 100%;
+        flex-direction: row; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .specialContent .specialContentLi {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .112rem; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .specialContent .active {
+          color: red;
+          border: 1px solid #b93939; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 {
+        flex: 1;
+        width: 100%;
+        flex-direction: row; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 .tingContent {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .112rem; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 .active {
+          color: red;
+          border: 1px solid #b93939; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton {
+        flex: 1;
+        width: 100%;
+        position: relative; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton .clickspecialChong {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .15rem;
+          position: absolute;
+          top: 10px;
+          left: 5px; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton .clickspecialQue {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .15rem;
+          position: absolute;
+          top: 10px;
+          right: 5px; }
+
+.active {
+  color: #ff2e62;
+  background: #f5f5f5;
+  border-bottom: none; }

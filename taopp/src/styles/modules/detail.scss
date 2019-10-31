@@ -1,0 +1,289 @@
+.bug {
+    display: flex;
+    position: relative;
+    height: 1.88rem;
+
+    .box-z {
+        position: absolute;
+        width: 100%;
+        height: 1.88rem;
+        background-color: #333;
+    }
+
+    .box {
+        width: 100%;
+        height: 188px;
+        position: absolute;
+        justify-content: center;
+        // padding: .19rem .30rem .19rem .15rem;
+        filter: blur(.2rem);
+        opacity: .55;
+        z-index: 2;
+        background-size: cover;
+
+    }
+
+    .box-t {
+        display: flex;
+        height: 1.38rem;
+        position: absolute;
+        top: .19rem;
+        left: .15rem;
+        z-index: 3;
+
+        img {
+            width: 1.1rem;
+            height: 1.5rem;
+        }
+
+        .cont {
+            width: 2.077rem;
+            height: 1.55rem;
+            margin-left: .125rem;
+            position: relative;
+            font-size: .12rem;
+            color: #fff;
+
+            .cnm {
+                font-size: .2rem;
+            }
+
+            .people {
+                font-size: .18rem;
+                font-weight: 700;
+                color: #fc0;
+                margin-top: .11rem;
+
+                span {
+                    font-size: .12rem;
+                    color: #fff;
+                }
+            }
+
+            .next-detail {
+                display: block;
+                font-size: .2rem;
+                color: rgb(233, 239, 240);
+                position: absolute;
+                top: 40%;
+                right: 0;
+            }
+
+        }
+
+    }
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+
+    li {
+
+        flex: 1;
+        position: relative;
+        display: inline-block;
+        width: 1.15rem;
+        line-height: .43rem;
+        margin-left: .045rem;
+        font-size: .14rem;
+        text-align: center;
+        list-style: none;
+        color: #666;
+    }
+
+    .active {
+        color: red;
+        border-bottom: red .02rem solid;
+    }
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+
+    li {
+        flex: 1;
+        list-style: none;
+        color: #666;
+        text-align: center;
+        line-height: .4rem;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: .13rem;
+        text-overflow: ellipsis;
+    }
+}
+
+#showDays {
+    width: 100%;
+    height: 45px;
+    overflow-x: scroll;
+    background-color: #fff;
+
+    #timeline {
+        overflow-x: scroll;
+        padding: 0;
+        margin: 0;
+        height: 45px;
+        white-space: nowrap;
+
+        .showDay {
+            position: relative;
+            display: inline-block;
+            width: 115px;
+            line-height: 43px;
+            margin-left: 4.5px;
+            font-size: 14px;
+            text-align: center;
+            list-style: none;
+            color: #666;
+        }
+
+        .active {
+            border-bottom: 2px solid #f03d37;
+            color: #f03d37;
+        }
+    }
+}
+.cinnema-detail{
+overflow: scroll;
+    ul {
+        background-color: #fff;
+        padding: 0 10px;
+    
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px 0;
+          overflow: hidden;
+    
+          .cinema {
+            @media screen and (max-width: 375px) {
+              font-size: 18px;
+            }
+    
+            @media screen and (min-width: 376px)and(max-width: 450px) {
+              font-size: 21px;
+            }
+    
+            @media screen and (min-width: 451px)and(max-width: 699px) {
+              font-size: 28px;
+            }
+    
+            @media screen and (min-width: 700px) and(max-width: 900px) {
+              font-size: 34px;
+            }
+    
+            @media screen and (min-width: 901px) {
+              font-size: 39px;
+            }
+    
+            display: flex;
+            justify-content: space-between;
+            //@include ellipsis(null, 1);
+            width:100%;
+    
+            .number {
+              color: red;
+              font-size: .16rem;
+            }
+    
+            .yuanFont {
+              font-size: .1rem;
+              color: red;
+            }
+    
+            .qiFont {
+              font-size: .1rem;
+              color: #999;
+            }
+          }
+    
+          .addr {
+            display: flex;
+            justify-content: space-between;
+    
+            .position {
+              font-size: 0.14rem;
+              color: #666;
+              //@include ellipsis(null, 1);
+              width: 100%;
+    
+              @media screen and (max-width: 375px) {
+                font-size: 15px;
+              }
+    
+              @media screen and (min-width: 376px)and(max-width: 450px) {
+                font-size: 16px;
+              }
+    
+              @media screen and (min-width: 451px)and(max-width: 699px) {
+                font-size: 20px;
+              }
+    
+              @media screen and (min-width: 700px) and(max-width: 900px) {
+                font-size: 25px;
+              }
+    
+              @media screen and (min-width: 901px) {
+                font-size: 29px;
+              }
+            }
+    
+            .distance {
+              padding-left: 5px;
+            }
+          }
+    
+          .status {
+          //  @include ellipsis(null, 1);
+            width: 100%;
+    
+            .blueBorder {
+              padding: 1px;
+              margin-right: 5px;
+              //border: 1px solid #A4D5FA;
+              color: #1394f3;
+              border: 1px solid #A4D5FA;
+              font-size: .1rem;
+            }
+    
+            .yellowBorder {
+              padding: 1px;
+              margin-right: 5px;
+              //border: 1px solid #A4D5FA;
+              color: #f90;
+              border: 1px solid #f90;
+              font-size: .1rem;
+            }
+          }
+    
+          .discount {
+            // @include ellipsis(null, 1);
+            width: 100%;
+            display: flex;
+            font-size: .1rem;
+            padding-top: 5px;
+            color: #999;
+    
+            .huiFont {
+              background-color: #FF9C1C;
+              color: #fff;
+              width: .15rem;
+              height: .15rem;
+              border-radius: 3px;
+              text-align: center;
+              line-height: .15rem;
+              margin-right: .05rem;
+            }
+          }
+    
+          // @include border(0 0 1px 0, #999);
+        }
+      }
+}

@@ -1,0 +1,25 @@
+<div class="cinemaDetail">
+    <li class="cinemaNm">
+        <p class="cinemanm ">{{list.cinemaData.nm}}</p>
+        <p class="site">{{list.cinemaData.addr}}</p>
+    </li>
+    <li class="lo"><span class="yo-ico">&#xe611;</span></li>
+</div>
+<div class="movlists">
+    <div class="swiper-container">
+
+        <div class="box-z"></div>
+        <div class="box" style="background:url({{list.showData.movies[0].img.replace(/w\.h/,'128.180')}})"></div>
+
+        <div class="swiper-wrapper m-father">
+            {{each list.showData.movies}}
+            <div class="swiper-slide mvlist">
+                <img src="{{$value.img.replace(/w\.h/,'128.180')}}" alt="">
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="movdes">
+
+</div>

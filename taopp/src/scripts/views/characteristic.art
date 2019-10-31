@@ -1,0 +1,28 @@
+<div class="selector-mod2" type="area" style="top: 52px;">
+        <div class="list-outer2" style="height: 500px;">
+                <div class="selector-in-chara" style="height: 500px;">
+                        <div class="filter-list-complex mall">
+                                <div class="clickspecialTitle">特色功能</div>
+                                <ul class="specialContent">
+                                        {{each service}}
+                                        <li data-serviceid="{{$value.id}}" class="specialContentLi">{{$value.name}}</li>
+                                        {{/each}}
+                                </ul>
+                                <div class="clickspecialTitle">特殊厅</div>
+                                <ul class="tingContent1">
+                                        {{each hallType}}
+                                        <li class="tingContent" data-hallTypeid="{{$value.id}}">{{$value.name}}</li>
+                                        {{/each}}
+                                        </ul>
+                                 <div class="clickspecialButton">
+                                        <div class="clickspecialChong">
+                                                重置
+                                        </div>
+                                        <div class="clickspecialQue">
+                                                确定
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

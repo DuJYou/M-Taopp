@@ -1,0 +1,6 @@
+{{each region1}}
+<div class="filter-item2-dt" data-stationId="{{$value.id}}">
+    <p>{{$value.name}}</p>
+    <p>{{$value.count}}</p>
+</div>
+{{/each}}

@@ -1,0 +1,11 @@
+<div class=".list-container">
+    <div class="myphoto">
+
+    </div>
+    <div class="ticket">
+        <li class="ticket-p"><a><span class="yo-ico">&#xe7cc;</span>电影票</a></li>
+        <li class="ticket-j"><a><span class="yo-ico">&#xe6da;</span>优惠价</a></li>
+    </div>
+    <div class="card">淘票票乐影卡<span class="yo-ico">&#xe602;</span></div>
+    <div class="help">帮主与反馈<span class="yo-ico"><span>资讯票小秘</span> &#xe602;</span></div>
+</div>

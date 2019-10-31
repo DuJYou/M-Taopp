@@ -1,0 +1,11 @@
+<div class="searchMain">
+    <div class="searchBun">
+        <span class="yo-ico sslog">&#xe630;</span>
+        <input class="ssk" type="search" placeholder="影院名称或地址">
+
+        <a class="fcancle"> 取消</a>
+    </div>
+</div>
+<div class="searchcont">
+  
+</div>

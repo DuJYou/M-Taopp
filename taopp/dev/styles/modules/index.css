@@ -1,0 +1,92 @@
+.index-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .index-container header {
+    display: flex;
+    height: .499rem;
+    background: #fff;
+    font-size: .15rem;
+    line-height: .44rem;
+    color: #000;
+    font-weight: 700; }
+    .index-container header .dz {
+      display: flex;
+      width: 1.5757rem;
+      height: .499rem;
+      background: url("http://gw.alicdn.com/tfs/TB1mKkzl9zqK1RjSZFpXXakSXXa-50-50.svg") no-repeat 0.15rem;
+      background-size: .25rem .25rem; }
+      .index-container header .dz a {
+        line-height: .499rem;
+        padding: 0 .50rem;
+        color: #000; }
+        .index-container header .dz a .sj {
+          vertical-align: middle;
+          display: inline-block;
+          margin-left: .03rem;
+          width: .08rem;
+          height: .04rem;
+          position: relative; }
+          .index-container header .dz a .sj::after {
+            content: "";
+            display: block;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: .04rem solid transparent;
+            border-right: .04rem solid transparent;
+            border-top: .04rem solid #333;
+            position: absolute;
+            margin: -.012rem 0 0 -.04rem; }
+  .index-container .select {
+    font-size: .16rem;
+    line-height: .499rem;
+    display: flex; }
+    .index-container .select a {
+      display: block;
+      text-align: center;
+      width: .94rem;
+      height: 100%;
+      font-weight: normal;
+      color: #777; }
+      .index-container .select a.active {
+        font-weight: 700;
+        color: #ff2e62;
+        border-bottom: .02rem solid #ff2e62; }
+
+main {
+  flex: 1;
+  overflow: auto; }
+
+footer {
+  height: .44rem; }
+  footer ul {
+    height: 100%;
+    display: flex; }
+    footer ul li {
+      flex: 1;
+      background: #f6f6f6;
+      width: 1.2506rem;
+      text-align: center;
+      line-height: .44rem;
+      font-size: .18rem;
+      align-items: center;
+      justify-content: center;
+      color: #c2cfcc; }
+      footer ul li span {
+        font-size: .2rem; }
+      footer ul li.active {
+        color: #ff2e62; }
+      footer ul li .yo-ico {
+        display: block;
+        width: 1.2506rem;
+        text-align: center;
+        line-height: .2213rem;
+        font-size: .2213rem; }
+      footer ul li .yo-ico1 {
+        display: block;
+        text-align: center;
+        width: 1.2506rem;
+        line-height: .14rem;
+        font-size: .1rem; }

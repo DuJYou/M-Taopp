@@ -1,0 +1,22 @@
+{{each list}}
+      <li class="list-item" data-id="{{$value.id}}" >
+        <img src="{{$value.img.replace(/w\.h/,"128.108") }}" alt="">
+        <div class="item-desc">
+          <P class="item-title">{{$value.nm}}</P>
+          <p class="item-info">
+            <span class="item-pos">
+              淘票票评分：{{$value.sc}}
+            </span>
+          </p>
+          <p class="item-dy">场次:{{$value.wish}}</p>
+          <p class="item-zy">主演:{{$value.star}}</p>
+        </div>
+        <div class="list-shop">
+          <p>
+            <span class="item-salary" style="display:{{ $value.showst===~~3? 'block ' : 'none'}}"  >购票</span>
+            <span class="item-discounts" style="display:{{ $value.showst===~~3? 'block ' : 'none'}}" >特惠</span>
+            <span class="presell" style="display:{{ $value.showst===~~4? 'block ' : 'none' }}">预售</span>
+          </p>
+        </div>
+      </li>
+{{/each}}

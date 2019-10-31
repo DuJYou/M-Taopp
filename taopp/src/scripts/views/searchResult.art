@@ -1,0 +1,22 @@
+<h3>影院</h3>
+{{each list}}
+<li class="c_list" data-id="{{$value.id}}">
+    <div class="searchCinema"> {{ $value.nm }} <span class="searchsellPrice">{{ $value.sellPrice}}</span> <span
+            class="yuan"> 元起</span></div>
+    <div class="searchaddr"><span class="addr">{{ $value.addr}}</span> <span
+            class="searchdistance">{{ $value.distance}}</span></div>
+    <div class="status">
+        <span class="blueBorder1">座</span>
+        <span class="blueBorder1">改签</span>
+        <span class="yellowBorder1">小吃</span><span style="display:{{ $value.snack ? 'inline' : 'none' }}"
+            class="yellowBorder1">{{ $value.vipDesc ? $value.vipDesc : "" }}</span>
+        <span style="display:{{ $value.hallType? 'inline' : 'none' }}" class="blueBorder1">
+
+            {{$value.hallType}}
+
+        </span>
+
+
+    </div>
+</li>
+{{/each}}

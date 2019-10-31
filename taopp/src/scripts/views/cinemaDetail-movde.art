@@ -1,0 +1,15 @@
+<div class="movde">
+    <p class="movnm">{{movelist.nm}}<span class="pf">9.4</span></p>
+    <p class="movDel">{{movelist.desc}}</p>
+</div>
+<div class="time">
+    <div class="swiper-container1">
+        <div class="swiper-wrapper a">
+            {{each movelist.shows}}
+            <div class="swiper-slide times">{{$value.dateShow}}</div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<div class="session"></div>
+<div class="meal"></div>

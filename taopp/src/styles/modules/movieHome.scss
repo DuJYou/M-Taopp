@@ -1,0 +1,252 @@
+.movhome {
+
+    background: rgb(41, 55, 102);
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .movie_box_t {
+        display: flex;
+        position: relative;
+        height: 1.88rem;
+        // display: flex;
+        width: 100%;
+        // position: absolute;
+        top: .19rem;
+        left: .15rem;
+        z-index: 3;
+        overflow: hidden;
+
+        .movie_img img {
+            width: 1.1rem;
+            height: 1.5rem;
+        }
+
+        .movie_cont {
+
+            width: 2.077rem;
+            height: 1.55rem;
+            margin-left: .125rem;
+            font-size: .12rem;
+            color: #fff;
+            overflow: hidden;
+
+            .movie_cnm {
+                font-size: .2rem;
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-weight: 700;
+            }
+
+            .movie_enm {
+                font-size: .12rem;
+                opacity: .6;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .movie_cla {
+                font-size: .12rem;
+                opacity: .6;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .movie_time {
+                opacity: .6;
+                font-size: .12rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .movie_dayrime {
+                opacity: .6;
+                font-size: .12rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .ynlook {
+                display: flex;
+                padding: .05rem;
+
+                .wantlook {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: hsla(0, 0%, 100%, .35);
+                    box-shadow: 0 0.02rem 0.08rem 0 rgba(0, 0, 0, .1);
+                    border-radius: .08rem;
+                    font-size: .18rem;
+                    width: 47.61904762%;
+                    height: .2rem;
+                    color: #fff;
+                }
+
+                .nolook {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: .05rem;
+                    background: hsla(0, 0%, 100%, .35);
+                    box-shadow: 0 0.02rem 0.08rem 0 rgba(0, 0, 0, .1);
+                    border-radius: .08rem;
+                    font-size: .18rem;
+                    width: 47.61904762%;
+                    height: .2rem;
+                    color: #fff;
+                }
+            }
+        }
+
+
+    }
+
+    .WOM {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        box-shadow: 0 0 0.06rem 0 hsla(0, 0%, 100%, .03);
+        border-radius: .12rem;
+        margin-top: .3rem;
+        padding: .2rem .24rem;
+        overflow: hidden;
+        @include ellipsis();
+        @include border(0 0 1px 0, #e8e8e8);
+
+        .look-p {
+            text-align: center;
+
+            .movie_people {
+                width: 100%;
+                font-size: .20rem;
+                font-weight: 700;
+                color: #fc0;
+                margin-top: .11rem;
+
+            }
+
+            .look {
+                font-size: .12rem;
+                color: #fff;
+
+            }
+
+            @include border(0 0 1px 0, #e8e8e8);
+        }
+
+        .wom {
+
+            color: #fff;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome {
+            padding-top: .02rem;
+            color: #ffe4a2;
+        }
+    }
+
+    .shichang {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .1rem 0;
+        padding: .15rem;
+        color: #fff;
+        @include ellipsis();
+        @include border(0 0 1px 0, #e8e8e8);
+    }
+
+    .brief {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .jianjie {
+            color: #fff;
+            font-size: .15rem;
+            padding: 0 .15rem;
+            align-items: center;
+        }
+
+        .zhengwen {
+            color: #fff;
+            font-size: .15rem;
+            padding: .15rem;
+
+        }
+
+        @include border(0 0 1px 0, #e8e8e8);
+    }
+
+    .juz {
+        color: #fff;
+        font-size: .15rem;
+        padding: 0 .15rem;
+        align-items: center;
+
+    }
+
+    .jutiphoto {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        .ppp {
+            width: 1.4rem;
+            height: .93rem;
+            padding: .05rem;
+
+        }
+    }
+}
+
+.pinglun {
+    background-color: #fff;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    overflow: hidden;
+    margin-top: -.24rem;
+    position: relative;
+    border-radius: 50;
+
+    .pl {
+        display: block;
+        margin-top: .24rem;
+    }
+
+    .geren {
+        padding: .3rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h5 {
+            display: block;
+            width: 100%;
+            margin-top: -.1rem;
+        }
+
+        span {
+            font-size: .13rem;
+            color: #333;
+            line-height: .42rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow: hidden;
+        }
+    }
+}

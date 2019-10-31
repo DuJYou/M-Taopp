@@ -1,0 +1,119 @@
+.list-container .head,
+.list-container .foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; }
+
+.list-container .head img,
+.list-container .foot img {
+  width: .16rem;
+  height: .16rem;
+  transition: transform 150ms;
+  -webkit-transition: transform 150ms; }
+
+.list-container .head img {
+  transform: rotate(180deg); }
+
+.list-container .up {
+  transform: rotate(360deg) !important;
+  -webkit-transform: rotate(360deg) !important; }
+
+.list-container .down {
+  transform: rotate(180deg); }
+
+.list-container nav {
+  height: .44rem;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  position: relative; }
+  .list-container nav > div:first-child {
+    flex: 1;
+    line-height: .44rem;
+    padding-left: .15rem; }
+  .list-container nav > div:last-child {
+    margin-right: .15rem;
+    width: .84rem;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    border-radius: .15rem;
+    background: #f5f5f5;
+    color: #00b38a; }
+
+.list-container ul {
+  background: #fff; }
+  .list-container ul li.list-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: .15rem;
+    overflow: hidden; }
+    .list-container ul li.list-item img {
+      display: flex;
+      width: .649rem;
+      height: .9493rem;
+      border-radius: 2px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover; }
+    .list-container ul li.list-item .item-desc {
+      flex: 1;
+      width: 100%;
+      padding: 0 0.1rem;
+      overflow: hidden; }
+      @media screen and (max-device-width: 375px) {
+        .list-container ul li.list-item .item-desc .item-title {
+          font-size: 16px; } }
+      @media screen and (min-device-width: 376px) {
+        .list-container ul li.list-item .item-desc .item-title {
+          font-size: 20px; } }
+      .list-container ul li.list-item .item-desc .item-dy {
+        color: #000; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-dy {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-dy {
+            font-size: 16px; } }
+      .list-container ul li.list-item .item-desc .item-zy {
+        color: #666; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-zy {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-zy {
+            font-size: 16px; } }
+      .list-container ul li.list-item .item-desc .item-info {
+        display: flex;
+        color: #666;
+        line-height: .3rem;
+        overflow: hidden; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-info {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-info {
+            font-size: 16px; } }
+        .list-container ul li.list-item .item-desc .item-info .item-pos {
+          flex: 1; }
+    .list-container ul li.list-item .list-shop {
+      display: flex;
+      flex-direction: column;
+      padding-top: .2rem; }
+      .list-container ul li.list-item .list-shop .item-salary {
+        display: block;
+        border-radius: .5rem;
+        font-size: .14rem;
+        background: #ff2e62;
+        color: #fff;
+        width: .5rem;
+        height: .28rem;
+        text-align: center; }
+      .list-container ul li.list-item .list-shop .item-discounts {
+        display: block;
+        width: .5rem;
+        height: .28rem;
+        font-size: .12rem;
+        text-align: center; }

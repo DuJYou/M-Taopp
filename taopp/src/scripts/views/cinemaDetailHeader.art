@@ -1,0 +1,3 @@
+<div class="dh"><span class="fh">〈</span>
+    <h1 class="hnm">{{list.cinemaData.nm}}</h1>
+</div>

@@ -1,0 +1,43 @@
+.headerIconfont {
+  font-size: .01rem; }
+
+#headerList {
+  width: 100%;
+  display: flex;
+  font-weight: normal;
+  justify-content: space-between;
+  font-size: .13rem;
+  height: .41rem;
+  line-height: .41rem;
+  overflow: hidden; }
+  #headerList .region {
+    flex: 4;
+    display: flex; }
+    #headerList .region .logo {
+      margin-left: 10px; }
+      #headerList .region .logo img {
+        width: .25rem;
+        height: .25rem; }
+    #headerList .region .activeCity {
+      font-weight: normal;
+      font-size: .15rem;
+      margin-left: 5px;
+      color: #8A869E; }
+  #headerList .allCity {
+    display: flex;
+    flex: 3;
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+    height: .41rem;
+    line-height: .41rem; }
+  #headerList .comprehensive {
+    text-align: right;
+    flex: 3; }
+  #headerList .characteristic {
+    text-align: right;
+    flex: 3; }
+  #headerList .search {
+    flex: 2;
+    text-align: center;
+    font-size: .18rem; }

@@ -1,0 +1,521 @@
+<div class="bug">
+
+    <div class="box-z"></div>
+    <div class="box" style="background:url({{list.img.replace(/w\.h/,'71.100')}})"></div>
+    <div class="box-t">
+        <div class="img"><img src="{{list.img.replace(/w\.h/,'148.208')}}"></div>
+        <div class="cont">
+            <p class="cnm">{{list.nm}}</p>
+            <p class="enm">{{list.enm}}</p>
+            <p class="people">{{list.sc}} <span>{{list.snum}}人评</span></p>
+            <p class="cla">{{list.cat}}</p>
+            <p class="time">{{list.src}}</p>
+            <p class="dayrime">{{list.pubDesc}}</p>
+            <a class="next-detail">></a>
+        </div>
+
+    </div>
+</div>
+<div class="day">
+
+
+</div>
+<div id="showDays"><ul id="timeline" class="mb-line-b">
+    
+    <li data-day="2019-10-21" class="showDay active ">
+        今天10月22日
+        </li>
+
+    <li data-day="2019-10-22" class="showDay">
+        明天10月23日
+        </li>
+
+    <li data-day="2019-10-23" class="showDay">
+        后天10月24日
+        </li>
+
+    <li data-day="2019-10-24" class="showDay">
+        周四10月24日
+        </li>
+
+    <li data-day="2019-10-25" class="showDay">
+        周五10月25日
+        </li>
+
+    <li data-day="2019-10-26" class="showDay">
+        周六10月26日
+        </li>
+
+    <li data-day="2019-10-27" class="showDay">
+        周日10月27日
+        </li>
+
+</ul></div>
+<div class="select">
+    <li class="qc">全城▼</li>
+    <li class="pp">品牌▼</li>
+    <li class="te">特色▼</li>
+</div>
+<div class="cinnema-detail">
+        <ul style="pointer-events: auto;">
+                <li data-id="26195">
+                  <div class=" cinema">
+                  大地院线影城（珠江摩尔店）
+                  <div class="prace">
+                    <span class="number">33</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区回龙观镇北清路1号院7号楼内7-101-26</span>
+                    <span class="distance">3.9km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="107">
+                  <div class=" cinema">
+                  中影国际影城（昌平永旺店）
+                  <div class="prace">
+                    <span class="number">35.9</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区北清路1号永旺国际商城3楼</span>
+                    <span class="distance">4km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">DTS:X 临境音厅</span><span style="display:inline" class="blueBorder">60帧厅</span><span style="display:inline" class="blueBorder">CINITY厅</span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减4元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="27624">
+                  <div class=" cinema">
+                  沙河镇中影智信影城
+                  <div class="prace">
+                    <span class="number">38</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区奇点中心（北京市昌平区能源东路1号）</span>
+                    <span class="distance">4.7km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:none" class="yellowBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display:none">
+                
+                    <span class="huiFont" style="display:none">卡</span>
+                    <span class="discountFont"></span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="25346">
+                  <div class=" cinema">
+                  华联影院（回龙观店）
+                  <div class="prace">
+                    <span class="number">23</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区回龙观镇西大街111号三层F3-90</span>
+                    <span class="distance">7.4km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:none" class="yellowBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display:none">
+                
+                    <span class="huiFont" style="display:none">卡</span>
+                    <span class="discountFont"></span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="25814">
+                  <div class=" cinema">
+                  莱纳龙域影城
+                  <div class="prace">
+                    <span class="number">29.9</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区龙域中街1号院1号楼昌发展万科广场5层</span>
+                    <span class="distance">7.9km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">杜比全景声厅</span><span style="display:inline" class="blueBorder">DTS:X 临境音厅</span><span style="display:inline" class="blueBorder">4K厅</span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="9647">
+                  <div class=" cinema">
+                  沃美影城（回龙观店）
+                  <div class="prace">
+                    <span class="number">39</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区回龙观同成街华联购物中心四楼（城铁回龙观站出口对面）</span>
+                    <span class="distance">9km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">杜比全景声厅</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减4元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="16285">
+                  <div class=" cinema">
+                  耀莱成龙影城（温泉镇店）
+                  <div class="prace">
+                    <span class="number">45</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区温泉镇北部文化中心D座</span>
+                    <span class="distance">9.2km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">杜比全景声厅</span><span style="display:inline" class="blueBorder">60帧厅</span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单1张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="5502">
+                  <div class=" cinema">
+                  保利国际影城（龙旗广场店）
+                  <div class="prace">
+                    <span class="number">38.9</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区黄平路19号院3号楼龙旗广场购物中心3层（地铁8号线育新站路北600米，近永辉超市）</span>
+                    <span class="distance">10km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">4K厅</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减12元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="7433">
+                  <div class=" cinema">
+                  大地影院（西三旗物美店）
+                  <div class="prace">
+                    <span class="number">38.9</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区悦秀路99号二层</span>
+                    <span class="distance">10.6km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单1张最高立减10元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="25016">
+                  <div class=" cinema">
+                  中影星美国际影城（温都水城店）
+                  <div class="prace">
+                    <span class="number">38</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区北七家镇温都水城广场4-5层</span>
+                    <span class="distance">10.7km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="25172">
+                  <div class=" cinema">
+                  华联影城（肖家河店）
+                  <div class="prace">
+                    <span class="number">30.9</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区龙背村路99号院北京华联龙背购物中心</span>
+                    <span class="distance">11km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="8186">
+                  <div class=" cinema">
+                  首都电影院（悦荟万科广场店）
+                  <div class="prace">
+                    <span class="number">34</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区南环路10号院1号楼悦荟万科广场8层</span>
+                    <span class="distance">11.1km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">杜比全景声厅</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减4元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="25045">
+                  <div class=" cinema">
+                  东融国际影城（西小口店）
+                  <div class="prace">
+                    <span class="number">38</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区文龙家园四里4号楼4F-08</span>
+                    <span class="distance">11.7km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:none" class="yellowBorder"></span><span style="display:inline" class="blueBorder">4D厅</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display:none">
+                
+                    <span class="huiFont" style="display:none">卡</span>
+                    <span class="discountFont"></span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="58">
+                  <div class=" cinema">
+                  金逸影城（新都店）
+                  <div class="prace">
+                    <span class="number">35</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区西三旗建材城中路6号新都购物广场1层</span>
+                    <span class="distance">11.8km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="5111">
+                  <div class=" cinema">
+                  北京清河CGV影城
+                  <div class="prace">
+                    <span class="number">54</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区清河中街68号华润五彩城购物中心东区7层</span>
+                    <span class="distance">11.9km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:inline" class="blueBorder">60帧厅</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减4元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="66">
+                  <div class=" cinema">
+                  大地影院（昌平菓岭店）
+                  <div class="prace">
+                    <span class="number">39</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区昌崔路203号果岭假日广场四楼</span>
+                    <span class="distance">12.2km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单1张最高立减10元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="50">
+                  <div class=" cinema">
+                  万达影城（昌平保利光魔店）
+                  <div class="prace">
+                    <span class="number">33</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区鼓楼南大街6号佳莲时代广场4楼（近鼓楼西街）</span>
+                    <span class="distance">12.3km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:none" class="yellowBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display:none">
+                
+                    <span class="huiFont" style="display:none">卡</span>
+                    <span class="discountFont"></span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="27629">
+                  <div class=" cinema">
+                  新影联米瑞酷影城（昌平西关店）
+                  <div class="prace">
+                    <span class="number">33</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区西关路20号琥珀郡1号楼101室2层</span>
+                    <span class="distance">12.5km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减4元</span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="5359">
+                  <div class=" cinema">
+                  新华国际影城（宝盛店）
+                  <div class="prace">
+                    <span class="number">36.5</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">海淀区宝盛北里西区28号兴美生活广场5层</span>
+                    <span class="distance">13.5km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display:none">
+                
+                    <span class="huiFont" style="display:none">卡</span>
+                    <span class="discountFont"></span>
+                
+                
+                  </div>
+                </li>
+                
+                <li data-id="26649">
+                  <div class=" cinema">
+                  中影星美国际影城（天通苑店）
+                  <div class="prace">
+                    <span class="number">28</span><span class="yuanFont">元</span><span class="qiFont">起</span>
+                  </div>
+                  </div>
+                  <div class="addr">
+                    <span class="position">昌平区东小口镇天通苑西三区天通尾货3层</span>
+                    <span class="distance">14.6km</span>
+                  </div>
+                  <div class="status">
+                    <span class="blueBorder">退</span><span class="blueBorder">改签</span><span class="yellowBorder">小吃</span><span style="display:inline" class="yellowBorder">折扣卡</span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span><span style="display:none" class="blueBorder"></span>
+                  </div>
+                  <div class="discount" style="display: ">
+                
+                    <span class="huiFont" style="display: ">卡</span>
+                    <span class="discountFont">开卡特惠，首单2张最高立减6元</span>
+                
+                
+                  </div>
+                </li>
+                </ul>
+</div>

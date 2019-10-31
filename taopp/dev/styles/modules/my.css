@@ -1,0 +1,15 @@
+.myphoto {
+  display: block;
+  width: 100%;
+  height: 1.7rem;
+  background: red; }
+
+.ticket {
+  flex-direction: row;
+  height: 1.1rem; }
+
+.card {
+  height: 0.6rem; }
+
+.help {
+  height: 0.6rem; }

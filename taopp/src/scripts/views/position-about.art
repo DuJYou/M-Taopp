@@ -1,0 +1,19 @@
+{{each timeArr}}
+<div class="time">{{$value[0]}}</div>
+{{each $value[1] list}}
+<li class="list-item" data-Mid="{{list.id}}">
+  <img src="{{list.img.replace(/w\.h/,"128.108") }}" alt="">
+  <div class="item-desc">
+    <P class="item-title">{{list.nm}}</P>
+    <p class="item-zy">主演:{{list.star}}</p>
+    <p class="item-dy"><span class="xkrs">{{list.wish}}</span> 人想看</p>
+    <span class="item-tm">{{list.comingTitle}}</span> <span> 上映</span>
+  </div>
+  <div class="list-shop">
+    
+      <div class="presell">预售</d>
+      
+  </div>
+</li>
+{{/each}}
+{{/each}}

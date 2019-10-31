@@ -1,0 +1,317 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: .14rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.cinemaDetail {
+    font-size: .14rem;
+    color: #777;
+    position: relative;
+    padding: .15rem;
+    padding-right: 1.00rem;
+    display: flex;
+    height: 0.744rem;
+
+    .cinemaNm {
+        list-style: none;
+        height: 0.774rem;
+        width: 2.602rem;
+
+        padding: 0 1rem .15rem .15rem;
+
+        .cinemanm {
+            font-weight: 700;
+            width: 2.602rem;
+            height: 0.24rem;
+            font-size: .17rem;
+            color: #333;
+            border-right: .001rem solid #999;
+            @include ellipsis();
+        }
+
+        .site {
+            list-style: none;
+            width: 2.602rem;
+            height: 0.184rem;
+            font-size: .13rem;
+            margin: .02rem 0;
+            color: #999;
+            @include ellipsis();
+        }
+    }
+
+    .lo {
+        list-style: none;
+        width: 0.19rem;
+        height: 0.22rem;
+        margin: 0 0 0 50px;
+        .yo-ico{
+           font-size: 25px;
+           color: rgb(95, 95, 236);
+        }
+    }
+}
+
+.movlists {
+    width: 100%;
+    height: 1.35rem;
+    // background: red;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .box-z {
+            position: absolute;
+            width: 100%;
+            height: 1.88rem;
+            background-color: #333;
+        }
+        .box {
+            width: 100%;
+            height: 1.88rem;
+            position: absolute;
+            justify-content: center;
+            filter: blur(.2rem);
+            opacity: .55;
+            z-index: 1;
+            background-size: cover;
+
+        }
+        .mvlist{
+            position: absolute;
+            z-index: 5;
+            text-align: center;
+            font-size: 18px;
+            width: 75px;
+            height: 109.24px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 300ms;
+            transform: scale(0.8);
+        }
+        .swiper-slide img {
+            height: 110px;
+            width: 75px;
+
+        }
+
+        .m-father{
+            padding-top: .15rem;
+        }
+        .swiper-slide-active,
+        .swiper-slide-duplicate-active {
+            transform: scale(1);
+        }
+    }
+}
+
+.movdes {
+    .movde {
+        width: 100%;
+        height: .665rem;
+        background: #fff;
+        padding: .11rem .15rem;
+        text-align: center;
+
+        .movnm {
+            height: .24rem;
+            line-height: .24rem;
+            font-size: .17rem;
+            color: #333;
+            font-weight: 700;
+
+            .pf {
+                color: #ffb400;
+                font-size: .16rem;
+
+            }
+        }
+
+        .movDel {
+            margin-top: .02rem;
+            height: .185rem;
+            line-height: .185rem;
+            font-size: .13rem;
+            color: #999;
+        }
+
+        .time .a {
+            // display: flex;
+            width: 100%;
+            line-height: .45rem;
+            height: .45rem;
+            text-align: center;
+            font-size: .14rem;
+            color: #666;
+            .times {
+                width: 88px;
+                font-size: .14rem;
+                text-align: center;
+                list-style: none;
+                line-height: .45rem;
+                height: .45rem;
+            
+            }
+            .active {
+                color: red;
+                border-bottom: red solid .02rem;
+                display: block;
+            }
+        }
+        
+            }
+
+    .session {
+        flex: 1;
+        min-height: .4rem;
+        width: 100%;
+
+        .ListLi {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 0;
+
+            .ListTime {
+                flex: 1.5;
+
+                .startTime {
+                    font-size: 20px;
+                    color: #333;
+                    white-space: nowrap;
+                }
+
+                .endTime {
+                    color: #999;
+                    font-size: 11px;
+                    white-space: nowrap;
+                }
+            }
+
+            .Lange {
+                flex: 2;
+
+                .LangeDetail {
+                    margin-top: 6px;
+                    line-height: 18px;
+                    font-size: 13px;
+                    color: #333;
+                    white-space: normal;
+                }
+
+                .cinemaNumber {
+                    margin-top: 6px;
+                    font-size: 11px;
+                    color: #999;
+                    white-space: normal;
+                }
+            }
+
+            .price {
+                flex: 3;
+                font-size: 10px;
+
+                .priceNumber {
+                    .priceNumberf {
+                        font-size: 19px;
+                        color: #f03d37;
+                        margin-top: 1px;
+                    }
+
+                    .priceFont {
+                        font-size: 11px;
+                        color: #f03d37;
+                        margin-top: 1px;
+                    }
+                }
+
+                .zhekouk {
+                    flex: 2;
+                    display: inline-block;
+                    line-height: 15px;
+                    height: 15px;
+                    transform: scale(.8);
+                    transform-origin: left;
+                    margin-right: -16px;
+                    border: 1px solid #ff9000;
+                    border-radius: 2px;
+                    font-size: 12px;
+
+                    .zhekouka {
+                        color: #fff;
+                        background-color: #f90;
+                        transform: scale(.8);
+                    }
+
+                    .zhekoujia {
+                        background-color: #fff;
+                        color: #f90;
+                        margin-left: -4px;
+                        ;
+                        @include border(1px, #f90);
+                        transform: scale(.8);
+                    }
+                }
+
+                .zhekouyouhui {
+                    margin-top: 2px;
+                    font-size: 11px;
+                    color: #999;
+                }
+            }
+
+            @include border(0 0 1px 0, #777);
+
+            .buyprice {
+                margin-right: 10px;
+                flex: 1;
+                top: 50%;
+                padding: 5px 0;
+                font-size: 12px;
+                background-color: #f03d37;
+                color: #fff;
+                border-radius: 4px;
+                text-align: center;
+            }
+        }
+
+    }
+    .time .a {
+        // display: flex;
+        width: 100%;
+        line-height: .45rem;
+        height: .45rem;
+        text-align: center;
+        font-size: .14rem;
+        color: #666;
+        .times {
+            // width: 88px;
+           width: 33%;
+            font-size: .14rem;
+            text-align: center;
+            list-style: none;
+            line-height: .45rem;
+            height: .45rem;
+            // margin: 0 20px 0 20px;
+
+        }
+        .active {
+            color: red;
+            border-bottom: red solid .02rem;
+            display: block;
+        }
+    }
+}

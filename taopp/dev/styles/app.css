@@ -1,0 +1,2597 @@
+@charset "UTF-8";
+/**
+ * Yo框架全局base定义
+ * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
+ * lib中map使用“_”开头，本文件中不使用"_"
+ * base ⇌ extra
+ */
+/**
+ * Yo框架全局base定义
+ * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
+ * 本文件中map使用"_"开头，extra中不使用"_"
+ * base ⇌ extra
+ */
+/**
+ * 合并base和extra中的同类base map
+ * 用以解决业务方升级Yo时需比base和extra的一致性
+ * 当extra为空时，base map将以base文件里的定义作为默认值
+ * 当extra不为空时，base map使用extra文件里的定义
+ */
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null；
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * variables中map使用“_”开头，本文件中不使用"_"
+ * variables ⇌ config
+ */
+/**
+ * Yo框架全局Variables
+ * Yo基础变量map，如果不想定义某属性，将其value设置为null
+ * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方
+ * 本文件中map使用"_"开头，config中不使用"_"
+ * variables ⇌ config
+ */
+/**
+ * 合并variables和config中的同类map
+ * 用以解决业务方升级Yo时需比config和variables的一致性
+ * 当config为空时，使用variables中的map作为默认值
+ * 当config不为空时，使用config中的定义
+ */
+/**
+ * Yo框架自定义全局函数
+ * 扩充Sass默认函数库，用以增强语法
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的第一项
+ * @function first
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的最后一项
+ * @function last
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 返回SassList中的倒数第几项
+ * @function nth-last
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 移除SassList中的某个项目并返回新的List
+ * @function remove
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {String} $value 指定需要被删除的值 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 截取SassList中的某个部分并返回新的List
+ * @function slice
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>
+ * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>
+ */
+/**
+ * @module List扩展函数
+ * @description 从SassList中添加/删除项目，然后返回新的List。
+ * @function splice
+ * @version 2.1.0
+ * @param {String} $list 指定一个Sass List <2.1.0>
+ * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>
+ * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>
+ * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>
+ */
+/**
+ * Yo框架全局基础方法
+ * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法
+ */
+/**
+ * @module 常用方法
+ * @description 给需要的属性加厂家前缀
+ * @method prefix
+ * @version 1.0.0
+ * @param {String} $property 指定属性 <1.0.0>
+ * @param {String} $value 指定属性值 <1.0.0>
+ * @skip
+ */
+/**
+ * @module 常用方法
+ * @description 定义字体图标
+ * @method _iconfont
+ * @version 1.0.0
+ * @skip
+ */
+/**
+ * @module 常用方法
+ * @description 四则运算(系统要求：iOS6.0+,Android4.4+)
+ * @method calc
+ * @version 1.7.0
+ * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>
+ * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>
+ * @example
+ * .calc {
+ *     @include calc(width, "100% - 100px");
+ * }
+ *
+ * <div class="calc">四则运算</div>
+ */
+/**
+ * @module 常用方法
+ * @description 定义响应式方案
+ * @method responsive
+ * @version 1.0.0
+ * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 清除浮动方案
+ * @method clearfix
+ * @version 1.0.0
+ * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>
+ */
+/**
+ * @module 常用方法
+ * @description 清除行内级元素间间隙方案
+ * @method clearspace
+ * @version 3.0.3
+ * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>
+ * @example
+ * .demo {
+ *     @include clearspace;
+ * }
+ *
+ * <div class="demo">
+ *      <span class="item">1</span>
+ *      <span class="item">2</span>
+ *      <span class="item">3</span>
+ * </div>
+ */
+/**
+ * @module 常用方法
+ * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐
+ * @method align
+ * @version 2.0.0
+ * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>
+ * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>
+ * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>
+ * @example
+ * .demo {
+ *     @include align;
+ * }
+ *
+ * <div class="demo">
+ *      <img alt="未知尺寸图片居中" />
+ * </div>
+ */
+/**
+ * @module 常用方法
+ * @description 定义是否有滚动条
+ * @method overflow
+ * @version 1.0.0
+ * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 生成全屏方法
+ * @method fullscreen
+ * @version 1.7.0
+ * @param {Integer} $z-index 指定层叠级别 <1.7.0>
+ * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>
+ */
+/**
+ * @module 用户界面
+ * @description 定义使用何种滤镜
+ * @method filter
+ * @version 1.7.0
+ * @param {String} $filter 取值与`filter`属性一致 <1.7.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义UA默认外观
+ * @method appearance
+ * @version 1.0.0
+ * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义如何选中内容
+ * @method user-select
+ * @version 1.0.0
+ * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>
+ */
+/**
+ * @module 用户界面
+ * @description 定义盒模型
+ * @method box-sizing
+ * @version 1.0.0
+ * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义渐变色值
+ * @method gradient
+ * @version 1.0.0
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>
+ * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>
+ * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-size
+ * @version 1.4.0
+ * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-clip
+ * @version 1.6.0
+ * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）
+ * @method background-origin
+ * @version 1.6.0
+ * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 为元素添加边框（包括1px边框）
+ * @method border
+ * @version 2.0.0
+ * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>
+ * @param {String} $border-color 指定边框颜色 <2.0.0>
+ * @param {String} $border-style 指定边框样式 <2.0.0>
+ * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>
+ */
+/**
+ * @module 背景与边框
+ * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况
+ * @method border-radius
+ * @version 1.6.0
+ * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>
+ */
+/**
+ * @module Transform
+ * @description 定义简单变换
+ * @method transform
+ * @version 1.0.0
+ * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>
+ */
+/**
+ * @module Transform
+ * @description 定义变换原点
+ * @method transform-origin
+ * @version 1.0.0
+ * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化
+ * @method transform-style
+ * @version 2.0.0
+ * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。
+ * @method perspective
+ * @version 2.0.0
+ * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定透视点的位置
+ * @method perspective-origin
+ * @version 2.0.0
+ * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>
+ */
+/**
+ * @module Transform
+ * @description 指定元素背面面向用户时是否可见
+ * @method backface-visibility
+ * @version 2.0.0
+ * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>
+ */
+/**
+ * @module Animation
+ * @description 定义动画
+ * @method animation
+ * @version 1.0.0
+ * @param {String} $animation 取值与原生语法一致 <1.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定需要引用的动画名称
+ * @method animation-name
+ * @version 3.0.0
+ * @param {String} $animation-name 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画运行一次所持续的时长
+ * @method animation-duration
+ * @version 3.0.0
+ * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画运行方式
+ * @method animation-timing-function
+ * @version 3.0.0
+ * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画延迟多久之后再开始
+ * @method animation-delay
+ * @version 3.0.0
+ * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画循环几次
+ * @method animation-iteration-count
+ * @version 3.0.0
+ * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画的运动方向
+ * @method animation-direction
+ * @version 3.0.0
+ * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画的运动状态
+ * @method animation-play-state
+ * @version 3.0.0
+ * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Animation
+ * @description 指定动画时间之外的状态
+ * @method animation-fill-mode
+ * @version 3.0.0
+ * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>
+ */
+/**
+ * @module Transition
+ * @description 定义补间
+ * @method transition
+ * @version 1.0.0
+ * @param {String} $transition 取值与原生语法一致 <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义显示类型为伸缩盒
+ * @method flexbox
+ * @version 1.0.0
+ * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素如何分配空间
+ * @method flex
+ * @version 1.0.0
+ * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>
+ * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素的排版顺序
+ * @method order
+ * @version 1.0.0
+ * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)
+ * @method flex-flow
+ * @version 2.0.0
+ * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义伸缩盒子元素的流动方向
+ * @method flex-direction
+ * @version 1.0.0
+ * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)
+ * @method flex-wrap
+ * @version 1.0.0
+ * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)
+ * @method justify-content
+ * @version 1.0.0
+ * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)
+ * @method align-content
+ * @version 1.8.5
+ * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>
+ */
+/**
+ * @module Flexbox
+ * @description 定义单行弹性容器侧轴对齐方式
+ * @method align-items
+ * @version 1.0.0
+ * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module Flexbox
+ * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)
+ * @method align-self
+ * @version 1.0.0
+ * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成矩形方法
+ * @method rect
+ * @version 1.0.0
+ * @param {Length} $width 定义矩形的长度 <1.0.0>
+ * @param {Length} $height 定义矩形的高度 <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成正方形方法
+ * @method square
+ * @version 1.0.0
+ * @param {Length} $size 定义正方形的边长 <1.0.0>
+ */
+/**
+ * @module 形状
+ * @description 生成圆形方法
+ * @method circle
+ * @version 1.0.0
+ * @param {Length} $size 定义圆的半径长度 <1.0.0>
+ * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>
+ */
+/**
+ * @module 常用方法
+ * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。
+ * @method fixed-scale
+ * @version 3.0.10
+ * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>
+ * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>
+ */
+/**
+ * @module 文本
+ * @description 链接处理方法
+ * @method link
+ * @version 1.0.0
+ * @param {Color} $color 定义链接颜色 <1.0.0>
+ */
+/**
+ * @module 文本
+ * @description 文本碰到边界是否换行
+ * @method wrap
+ * @version 1.0.0
+ * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>
+ */
+/**
+ * @module 文本
+ * @description 单行文本溢出时显示省略号
+ * @method ellipsis
+ * @version 1.0.0
+ * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>
+ * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>
+ */
+/**
+ * @module 文本
+ * @description 文字隐藏方案
+ * @method texthide
+ * @version 1.0.0
+ * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>
+ */
+/**
+ * Yo框架全局Reset
+ * Yo重置Mobile及高级浏览器上常见的差异
+ */
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html,
+body {
+  overflow: hidden;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+html {
+  background-color: #eee;
+  color: #212121;
+  font-size: 100px;
+  -webkit-user-select: none;
+  user-select: none; }
+
+body {
+  margin: 0;
+  font-size: 0.14em;
+  line-height: 1.5;
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
+
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+p,
+blockquote,
+th,
+td,
+pre,
+xmp {
+  margin: 0;
+  padding: 0; }
+
+input,
+textarea,
+button,
+select,
+pre,
+xmp,
+tt,
+code,
+kbd,
+samp {
+  line-height: inherit;
+  font-family: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+big,
+input,
+textarea,
+button,
+select {
+  font-size: inherit; }
+
+address,
+cite,
+dfn,
+em,
+i,
+optgroup,
+var {
+  font-style: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: left; }
+
+ul,
+ol,
+menu {
+  list-style: none; }
+
+fieldset,
+img {
+  border: 0;
+  vertical-align: middle; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "\0020"; }
+
+textarea,
+pre,
+xmp {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+textarea {
+  resize: vertical; }
+
+input,
+textarea,
+button,
+select,
+summary,
+a {
+  outline: 0 none; }
+
+input,
+textarea,
+button,
+select {
+  color: inherit; }
+  input:disabled,
+  textarea:disabled,
+  button:disabled,
+  select:disabled {
+    opacity: 1; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none; }
+
+::-webkit-details-marker {
+  display: none; }
+
+mark {
+  background-color: rgba(0, 0, 0, 0); }
+
+a,
+ins,
+s,
+u,
+del {
+  text-decoration: none; }
+
+a,
+img {
+  -webkit-touch-callout: none; }
+
+a {
+  color: #00afc7; }
+
+.g-clear::after,
+.g-mod::after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  content: "\0020"; }
+
+@font-face {
+  font-family: yofont;
+  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype"); }
+
+.yo-ico {
+  font-family: yofont !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle; }
+
+.headerIconfont {
+  font-size: .01rem; }
+
+#headerList {
+  width: 100%;
+  display: flex;
+  font-weight: normal;
+  justify-content: space-between;
+  font-size: .13rem;
+  height: 100%;
+  line-height: .49rem;
+  position: relative;
+  overflow: hidden; }
+  #headerList .region {
+    flex: 4;
+    display: flex;
+    padding-left: 5px; }
+    #headerList .region .logo {
+      margin-left: 10px; }
+      #headerList .region .logo img {
+        width: .26rem;
+        height: .26rem; }
+    #headerList .region .activeCity {
+      font-weight: normal;
+      font-size: .15rem;
+      margin-left: 5px;
+      color: #8A869E; }
+      #headerList .region .activeCity .citysj {
+        display: block;
+        width: .1rem;
+        height: .1rem;
+        margin-left: 10px; }
+  #headerList .allCityFont {
+    display: flex;
+    flex: 3;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: .49rem;
+    line-height: .49rem; }
+  #headerList .comprehensive {
+    text-align: center;
+    flex: 3; }
+  #headerList .characteristic {
+    text-align: center;
+    flex: 3; }
+  #headerList .search {
+    flex: 2;
+    text-align: center;
+    font-size: .18rem; }
+  #headerList .active {
+    color: red; }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: .14rem;
+  color: #000;
+  margin: 0;
+  padding: 0; }
+
+.cinemaDetail {
+  font-size: .14rem;
+  color: #777;
+  position: relative;
+  padding: .15rem;
+  padding-right: 1.00rem;
+  display: flex;
+  height: 0.744rem; }
+  .cinemaDetail .cinemaNm {
+    list-style: none;
+    height: 0.774rem;
+    width: 2.602rem;
+    padding: 0 1rem .15rem .15rem; }
+    .cinemaDetail .cinemaNm .cinemanm {
+      font-weight: 700;
+      width: 2.602rem;
+      height: 0.24rem;
+      font-size: .17rem;
+      color: #333;
+      border-right: .001rem solid #999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .cinemaDetail .cinemaNm .site {
+      list-style: none;
+      width: 2.602rem;
+      height: 0.184rem;
+      font-size: .13rem;
+      margin: .02rem 0;
+      color: #999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .cinemaDetail .lo {
+    list-style: none;
+    width: 0.19rem;
+    height: 0.22rem;
+    margin: 0 0 0 50px; }
+    .cinemaDetail .lo .yo-ico {
+      font-size: 25px;
+      color: #5f5fec; }
+
+.movlists {
+  width: 100%;
+  height: 1.35rem; }
+  .movlists .swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .movlists .swiper-container .box-z {
+      position: absolute;
+      width: 100%;
+      height: 1.88rem;
+      background-color: #333; }
+    .movlists .swiper-container .box {
+      width: 100%;
+      height: 1.88rem;
+      position: absolute;
+      justify-content: center;
+      filter: blur(0.2rem);
+      opacity: .55;
+      z-index: 1;
+      background-size: cover; }
+    .movlists .swiper-container .mvlist {
+      position: absolute;
+      z-index: 5;
+      text-align: center;
+      font-size: 18px;
+      width: 75px;
+      height: 109.24px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 300ms;
+      transform: scale(0.8); }
+    .movlists .swiper-container .swiper-slide img {
+      height: 110px;
+      width: 75px; }
+    .movlists .swiper-container .m-father {
+      padding-top: .15rem; }
+    .movlists .swiper-container .swiper-slide-active,
+    .movlists .swiper-container .swiper-slide-duplicate-active {
+      transform: scale(1); }
+
+.movdes .movde {
+  width: 100%;
+  height: .665rem;
+  background: #fff;
+  padding: .11rem .15rem;
+  text-align: center; }
+  .movdes .movde .movnm {
+    height: .24rem;
+    line-height: .24rem;
+    font-size: .17rem;
+    color: #333;
+    font-weight: 700; }
+    .movdes .movde .movnm .pf {
+      color: #ffb400;
+      font-size: .16rem; }
+  .movdes .movde .movDel {
+    margin-top: .02rem;
+    height: .185rem;
+    line-height: .185rem;
+    font-size: .13rem;
+    color: #999; }
+  .movdes .movde .time .a {
+    width: 100%;
+    line-height: .45rem;
+    height: .45rem;
+    text-align: center;
+    font-size: .14rem;
+    color: #666; }
+    .movdes .movde .time .a .times {
+      width: 88px;
+      font-size: .14rem;
+      text-align: center;
+      list-style: none;
+      line-height: .45rem;
+      height: .45rem; }
+    .movdes .movde .time .a .active {
+      color: red;
+      border-bottom: red solid .02rem;
+      display: block; }
+
+.movdes .session {
+  flex: 1;
+  min-height: .4rem;
+  width: 100%; }
+  .movdes .session .ListLi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 0;
+    position: relative; }
+    .movdes .session .ListLi .ListTime {
+      flex: 1.5; }
+      .movdes .session .ListLi .ListTime .startTime {
+        font-size: 20px;
+        color: #333;
+        white-space: nowrap; }
+      .movdes .session .ListLi .ListTime .endTime {
+        color: #999;
+        font-size: 11px;
+        white-space: nowrap; }
+    .movdes .session .ListLi .Lange {
+      flex: 2; }
+      .movdes .session .ListLi .Lange .LangeDetail {
+        margin-top: 6px;
+        line-height: 18px;
+        font-size: 13px;
+        color: #333;
+        white-space: normal; }
+      .movdes .session .ListLi .Lange .cinemaNumber {
+        margin-top: 6px;
+        font-size: 11px;
+        color: #999;
+        white-space: normal; }
+    .movdes .session .ListLi .price {
+      flex: 3;
+      font-size: 10px; }
+      .movdes .session .ListLi .price .priceNumber .priceNumberf {
+        font-size: 19px;
+        color: #f03d37;
+        margin-top: 1px; }
+      .movdes .session .ListLi .price .priceNumber .priceFont {
+        font-size: 11px;
+        color: #f03d37;
+        margin-top: 1px; }
+      .movdes .session .ListLi .price .zhekouk {
+        flex: 2;
+        display: inline-block;
+        line-height: 15px;
+        height: 15px;
+        transform: scale(0.8);
+        transform-origin: left;
+        margin-right: -16px;
+        border: 1px solid #ff9000;
+        border-radius: 2px;
+        font-size: 12px; }
+        .movdes .session .ListLi .price .zhekouk .zhekouka {
+          color: #fff;
+          background-color: #f90;
+          transform: scale(0.8); }
+        .movdes .session .ListLi .price .zhekouk .zhekoujia {
+          background-color: #fff;
+          color: #f90;
+          margin-left: -4px;
+          position: relative;
+          transform: scale(0.8); }
+          .movdes .session .ListLi .price .zhekouk .zhekoujia::after {
+            pointer-events: none;
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            content: "\0020";
+            border-color: #f90;
+            border-style: solid;
+            border-width: 1px;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0; }
+            @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+              .movdes .session .ListLi .price .zhekouk .zhekoujia::after {
+                width: 100%;
+                height: 100%; } }
+            @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+              .movdes .session .ListLi .price .zhekouk .zhekoujia::after {
+                width: 200%;
+                height: 200%;
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5); } }
+            @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+              .movdes .session .ListLi .price .zhekouk .zhekoujia::after {
+                width: 300%;
+                height: 300%;
+                -webkit-transform: scale(0.33333);
+                transform: scale(0.33333); } }
+      .movdes .session .ListLi .price .zhekouyouhui {
+        margin-top: 2px;
+        font-size: 11px;
+        color: #999; }
+    .movdes .session .ListLi::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #777;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .movdes .session .ListLi::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .movdes .session .ListLi::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .movdes .session .ListLi::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+    .movdes .session .ListLi .buyprice {
+      margin-right: 10px;
+      flex: 1;
+      top: 50%;
+      padding: 5px 0;
+      font-size: 12px;
+      background-color: #f03d37;
+      color: #fff;
+      border-radius: 4px;
+      text-align: center; }
+
+.movdes .time .a {
+  width: 100%;
+  line-height: .45rem;
+  height: .45rem;
+  text-align: center;
+  font-size: .14rem;
+  color: #666; }
+  .movdes .time .a .times {
+    width: 33%;
+    font-size: .14rem;
+    text-align: center;
+    list-style: none;
+    line-height: .45rem;
+    height: .45rem; }
+  .movdes .time .a .active {
+    color: red;
+    border-bottom: red solid .02rem;
+    display: block; }
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .index-container header {
+    display: flex;
+    height: .499rem;
+    background: #fff;
+    font-size: .15rem;
+    line-height: .44rem;
+    color: #000;
+    font-weight: 700; }
+    .index-container header .dz {
+      display: flex;
+      width: 1.5757rem;
+      height: .499rem;
+      background: url("http://gw.alicdn.com/tfs/TB1mKkzl9zqK1RjSZFpXXakSXXa-50-50.svg") no-repeat 0.15rem 0.13rem;
+      background-size: .25rem .25rem; }
+      .index-container header .dz a {
+        line-height: .499rem;
+        padding: 0 0 0 .50rem;
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        .index-container header .dz a .sj {
+          vertical-align: middle;
+          display: inline-block;
+          margin-left: .03rem;
+          width: .08rem;
+          height: .04rem;
+          position: relative; }
+          .index-container header .dz a .sj::after {
+            content: "";
+            display: block;
+            top: 50%;
+            left: 50%;
+            width: .08rem;
+            height: .04rem;
+            border-left: .04rem solid transparent;
+            border-right: .04rem solid transparent;
+            border-top: .04rem solid #333;
+            position: absolute;
+            margin: -.012rem 0 0 -.04rem; }
+  .index-container .select {
+    font-size: .16rem;
+    line-height: .499rem;
+    display: flex; }
+    .index-container .select li {
+      display: block;
+      text-align: center;
+      width: .94rem;
+      height: 100%;
+      font-weight: normal;
+      color: #777; }
+      .index-container .select li.active {
+        font-weight: 700;
+        color: #ff2e62;
+        border-bottom: .02rem solid #ff2e62; }
+
+main {
+  flex: 1;
+  overflow: auto; }
+
+footer {
+  height: .44rem; }
+  footer ul {
+    height: 100%;
+    display: flex; }
+    footer ul li {
+      flex: 1;
+      background: #f6f6f6;
+      width: 1.2506rem;
+      text-align: center;
+      line-height: .44rem;
+      font-size: .18rem;
+      align-items: center;
+      justify-content: center;
+      color: #c2cfcc; }
+      footer ul li span {
+        font-size: .2rem; }
+      footer ul li.active {
+        color: #ff2e62; }
+      footer ul li .yo-ico {
+        display: block;
+        width: 1.2506rem;
+        text-align: center;
+        line-height: .2213rem;
+        font-size: .2213rem; }
+      footer ul li .yo-ico1 {
+        display: block;
+        text-align: center;
+        width: 1.2506rem;
+        line-height: .14rem;
+        font-size: .1rem; }
+
+.list-container ul {
+  background-color: #fff;
+  padding: 0 10px; }
+  .list-container ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    overflow: hidden; }
+    .list-container ul li .cinema {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      @media screen and (max-width: 375px) {
+        .list-container ul li .cinema {
+          font-size: 18px; } }
+      @media screen and (min-width: 376px) and (max-width: 450px) {
+        .list-container ul li .cinema {
+          font-size: 21px; } }
+      @media screen and (min-width: 451px) and (max-width: 699px) {
+        .list-container ul li .cinema {
+          font-size: 28px; } }
+      @media screen and (min-width: 700px) and (max-width: 900px) {
+        .list-container ul li .cinema {
+          font-size: 34px; } }
+      @media screen and (min-width: 901px) {
+        .list-container ul li .cinema {
+          font-size: 39px; } }
+      .list-container ul li .cinema .number {
+        color: red;
+        font-size: .16rem; }
+      .list-container ul li .cinema .yuanFont {
+        font-size: .1rem;
+        color: red; }
+      .list-container ul li .cinema .qiFont {
+        font-size: .1rem;
+        color: #999; }
+    .list-container ul li .addr {
+      display: flex;
+      justify-content: space-between; }
+      .list-container ul li .addr .position {
+        font-size: 0.14rem;
+        color: #666;
+        width: 100%; }
+        @media screen and (max-width: 375px) {
+          .list-container ul li .addr .position {
+            font-size: 15px; } }
+        @media screen and (min-width: 376px) and (max-width: 450px) {
+          .list-container ul li .addr .position {
+            font-size: 16px; } }
+        @media screen and (min-width: 451px) and (max-width: 699px) {
+          .list-container ul li .addr .position {
+            font-size: 20px; } }
+        @media screen and (min-width: 700px) and (max-width: 900px) {
+          .list-container ul li .addr .position {
+            font-size: 25px; } }
+        @media screen and (min-width: 901px) {
+          .list-container ul li .addr .position {
+            font-size: 29px; } }
+      .list-container ul li .addr .distance {
+        padding-left: 5px; }
+    .list-container ul li .status {
+      width: 100%; }
+      .list-container ul li .status .blueBorder {
+        padding: 1px;
+        margin-right: 5px;
+        color: #1394f3;
+        border: 1px solid #A4D5FA;
+        font-size: .1rem; }
+      .list-container ul li .status .yellowBorder {
+        padding: 1px;
+        margin-right: 5px;
+        color: #f90;
+        border: 1px solid #f90;
+        font-size: .1rem; }
+    .list-container ul li .discount {
+      width: 100%;
+      display: flex;
+      font-size: .1rem;
+      padding-top: 5px;
+      color: #999; }
+      .list-container ul li .discount .huiFont {
+        background-color: #FF9C1C;
+        color: #fff;
+        width: .15rem;
+        height: .15rem;
+        border-radius: 3px;
+        text-align: center;
+        line-height: .15rem;
+        margin-right: .05rem; }
+
+.head,
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; }
+
+.head img,
+.foot img {
+  width: .16rem;
+  height: .16rem;
+  transition: transform 150ms;
+  -webkit-transition: transform 150ms; }
+
+.head img {
+  transform: rotate(180deg); }
+
+.up {
+  transform: rotate(360deg) !important;
+  -webkit-transform: rotate(360deg) !important; }
+
+.down {
+  transform: rotate(180deg); }
+
+#root {
+  height: 100%; }
+
+html {
+  font-size: 26.667vw; }
+
+@font-face {
+  font-family: 'yofont';
+  src: url("../../assets/icons/iconfont.woff") format("woff"), url("../../assets/icons/iconfont.ttf") format("truetype"); }
+
+.list-container .head,
+.list-container .foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; }
+
+.list-container .head img,
+.list-container .foot img {
+  width: .16rem;
+  height: .16rem;
+  transition: transform 150ms;
+  -webkit-transition: transform 150ms; }
+
+.list-container .head img {
+  transform: rotate(180deg); }
+
+.list-container .up {
+  transform: rotate(360deg) !important;
+  -webkit-transform: rotate(360deg) !important; }
+
+.list-container .down {
+  transform: rotate(180deg); }
+
+.list-container nav {
+  height: .44rem;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  position: relative; }
+  .list-container nav > div:first-child {
+    flex: 1;
+    line-height: .44rem;
+    padding-left: .15rem; }
+  .list-container nav > div:last-child {
+    margin-right: .15rem;
+    width: .84rem;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    border-radius: .15rem;
+    background: #f5f5f5;
+    color: #00b38a; }
+
+.list-container ul {
+  background: #fff; }
+  .list-container ul time {
+    width: 100%;
+    height: 20px; }
+  .list-container ul li.list-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: .15rem;
+    overflow: hidden; }
+    .list-container ul li.list-item img {
+      display: flex;
+      width: .649rem;
+      height: .9493rem;
+      border-radius: 2px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover; }
+    .list-container ul li.list-item .item-desc {
+      flex: 1;
+      width: 100%;
+      padding: 0 0.1rem;
+      overflow: hidden; }
+      @media screen and (max-device-width: 375px) {
+        .list-container ul li.list-item .item-desc .item-title {
+          font-size: 16px; } }
+      @media screen and (min-device-width: 376px) {
+        .list-container ul li.list-item .item-desc .item-title {
+          font-size: 20px; } }
+      .list-container ul li.list-item .item-desc .item-dy {
+        color: #666; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-dy {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-dy {
+            font-size: 16px; } }
+        .list-container ul li.list-item .item-desc .item-dy .xkrs {
+          color: #ff9c1c;
+          font-size: 14px; }
+      .list-container ul li.list-item .item-desc .item-zy {
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-zy {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-zy {
+            font-size: 16px; } }
+      .list-container ul li.list-item .item-desc .item-info {
+        display: flex;
+        color: #666;
+        line-height: .3rem;
+        overflow: hidden; }
+        @media screen and (max-device-width: 375px) {
+          .list-container ul li.list-item .item-desc .item-info {
+            font-size: 12px; } }
+        @media screen and (min-device-width: 376px) {
+          .list-container ul li.list-item .item-desc .item-info {
+            font-size: 16px; } }
+        .list-container ul li.list-item .item-desc .item-info .item-pos {
+          flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .list-container ul li.list-item .list-shop {
+      display: flex;
+      flex-direction: column;
+      padding-top: .2rem; }
+      .list-container ul li.list-item .list-shop .item-salary {
+        display: block;
+        border-radius: .5rem;
+        font-size: .14rem;
+        background: #ff2e62;
+        color: #fff;
+        width: .5rem;
+        height: .28rem;
+        text-align: center;
+        line-height: .28rem; }
+      .list-container ul li.list-item .list-shop .item-discounts {
+        display: block;
+        width: .5rem;
+        height: .28rem;
+        font-size: .12rem;
+        text-align: center; }
+
+.presell {
+  border-radius: .05rem;
+  font-size: .14rem;
+  background: #5957f0;
+  color: #fff;
+  width: .5rem;
+  height: .28rem;
+  text-align: center;
+  line-height: .28rem; }
+
+.dh {
+  display: flex;
+  width: 100%;
+  height: .499rem;
+  background: red;
+  color: #fff;
+  font-size: .18rem;
+  line-height: .44rem;
+  font-weight: 700;
+  text-align: center; }
+  .dh .fh {
+    width: 0.5rem;
+    text-align: center; }
+  .dh .hnm {
+    width: 2.7rem; }
+
+.bug {
+  display: flex;
+  position: relative;
+  height: 1.88rem; }
+  .bug .box-z {
+    position: absolute;
+    width: 100%;
+    height: 1.88rem;
+    background-color: #333; }
+  .bug .box {
+    width: 100%;
+    height: 188px;
+    position: absolute;
+    justify-content: center;
+    filter: blur(0.2rem);
+    opacity: .55;
+    z-index: 2;
+    background-size: cover; }
+  .bug .box-t {
+    display: flex;
+    height: 1.38rem;
+    position: absolute;
+    top: .19rem;
+    left: .15rem;
+    z-index: 3; }
+    .bug .box-t img {
+      width: 1.1rem;
+      height: 1.5rem; }
+    .bug .box-t .cont {
+      width: 2.077rem;
+      height: 1.55rem;
+      margin-left: .125rem;
+      position: relative;
+      font-size: .12rem;
+      color: #fff; }
+      .bug .box-t .cont .cnm {
+        font-size: .2rem; }
+      .bug .box-t .cont .people {
+        font-size: .18rem;
+        font-weight: 700;
+        color: #fc0;
+        margin-top: .11rem; }
+        .bug .box-t .cont .people span {
+          font-size: .12rem;
+          color: #fff; }
+      .bug .box-t .cont .next-detail {
+        display: block;
+        font-size: .2rem;
+        color: #e9eff0;
+        position: absolute;
+        top: 40%;
+        right: 0; }
+
+.day {
+  display: flex;
+  justify-content: center;
+  background: #fff; }
+  .day li {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    width: 1.15rem;
+    line-height: .43rem;
+    margin-left: .045rem;
+    font-size: .14rem;
+    text-align: center;
+    list-style: none;
+    color: #666; }
+  .day .active {
+    color: red;
+    border-bottom: red .02rem solid; }
+
+.select {
+  display: flex;
+  justify-content: center;
+  background: #fff; }
+  .select li {
+    flex: 1;
+    list-style: none;
+    color: #666;
+    text-align: center;
+    line-height: .4rem;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: .13rem;
+    text-overflow: ellipsis; }
+
+#showDays {
+  width: 100%;
+  height: 45px;
+  overflow-x: scroll;
+  background-color: #fff; }
+  #showDays #timeline {
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    white-space: nowrap; }
+    #showDays #timeline .showDay {
+      position: relative;
+      display: inline-block;
+      width: 115px;
+      line-height: 43px;
+      margin-left: 4.5px;
+      font-size: 14px;
+      text-align: center;
+      list-style: none;
+      color: #666; }
+    #showDays #timeline .active {
+      border-bottom: 2px solid #f03d37;
+      color: #f03d37; }
+
+.cinnema-detail {
+  overflow: scroll; }
+  .cinnema-detail ul {
+    background-color: #fff;
+    padding: 0 10px; }
+    .cinnema-detail ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 0;
+      overflow: hidden; }
+      .cinnema-detail ul li .cinema {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
+        @media screen and (max-width: 375px) {
+          .cinnema-detail ul li .cinema {
+            font-size: 18px; } }
+        @media screen and (min-width: 376px) and (max-width: 450px) {
+          .cinnema-detail ul li .cinema {
+            font-size: 21px; } }
+        @media screen and (min-width: 451px) and (max-width: 699px) {
+          .cinnema-detail ul li .cinema {
+            font-size: 28px; } }
+        @media screen and (min-width: 700px) and (max-width: 900px) {
+          .cinnema-detail ul li .cinema {
+            font-size: 34px; } }
+        @media screen and (min-width: 901px) {
+          .cinnema-detail ul li .cinema {
+            font-size: 39px; } }
+        .cinnema-detail ul li .cinema .number {
+          color: red;
+          font-size: .16rem; }
+        .cinnema-detail ul li .cinema .yuanFont {
+          font-size: .1rem;
+          color: red; }
+        .cinnema-detail ul li .cinema .qiFont {
+          font-size: .1rem;
+          color: #999; }
+      .cinnema-detail ul li .addr {
+        display: flex;
+        justify-content: space-between; }
+        .cinnema-detail ul li .addr .position {
+          font-size: 0.14rem;
+          color: #666;
+          width: 100%; }
+          @media screen and (max-width: 375px) {
+            .cinnema-detail ul li .addr .position {
+              font-size: 15px; } }
+          @media screen and (min-width: 376px) and (max-width: 450px) {
+            .cinnema-detail ul li .addr .position {
+              font-size: 16px; } }
+          @media screen and (min-width: 451px) and (max-width: 699px) {
+            .cinnema-detail ul li .addr .position {
+              font-size: 20px; } }
+          @media screen and (min-width: 700px) and (max-width: 900px) {
+            .cinnema-detail ul li .addr .position {
+              font-size: 25px; } }
+          @media screen and (min-width: 901px) {
+            .cinnema-detail ul li .addr .position {
+              font-size: 29px; } }
+        .cinnema-detail ul li .addr .distance {
+          padding-left: 5px; }
+      .cinnema-detail ul li .status {
+        width: 100%; }
+        .cinnema-detail ul li .status .blueBorder {
+          padding: 1px;
+          margin-right: 5px;
+          color: #1394f3;
+          border: 1px solid #A4D5FA;
+          font-size: .1rem; }
+        .cinnema-detail ul li .status .yellowBorder {
+          padding: 1px;
+          margin-right: 5px;
+          color: #f90;
+          border: 1px solid #f90;
+          font-size: .1rem; }
+      .cinnema-detail ul li .discount {
+        width: 100%;
+        display: flex;
+        font-size: .1rem;
+        padding-top: 5px;
+        color: #999; }
+        .cinnema-detail ul li .discount .huiFont {
+          background-color: #FF9C1C;
+          color: #fff;
+          width: .15rem;
+          height: .15rem;
+          border-radius: 3px;
+          text-align: center;
+          line-height: .15rem;
+          margin-right: .05rem; }
+
+.myphoto {
+  display: block;
+  width: 100%;
+  height: 1.7rem;
+  background: red; }
+
+.ticket {
+  display: flex;
+  flex-direction: row;
+  height: 1.1rem;
+  background: #fff;
+  position: relative; }
+  .ticket::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    content: "\0020";
+    border-color: #e8e8e8;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .ticket::after {
+        width: 100%;
+        height: 100%; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .ticket::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5); } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .ticket::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333); } }
+  .ticket .ticket-p {
+    flex: 1;
+    width: 1.87rem;
+    text-align: center;
+    font-size: .12rem;
+    line-height: .25rem;
+    list-style: none; }
+    .ticket .ticket-p a {
+      display: block;
+      color: #000; }
+    .ticket .ticket-p .yo-ico {
+      display: block;
+      padding-top: .55rem;
+      font-size: .25rem; }
+  .ticket .ticket-j {
+    flex: 1;
+    width: 1.87rem;
+    text-align: center;
+    font-size: .12rem;
+    line-height: .25rem;
+    list-style: none; }
+    .ticket .ticket-j a {
+      display: block;
+      color: #000; }
+    .ticket .ticket-j .yo-ico {
+      display: block;
+      padding-top: .55rem;
+      font-size: .25rem; }
+
+.card {
+  display: flex;
+  height: 0.6rem;
+  background: #fff;
+  flex: 5;
+  position: relative; }
+  .card::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    content: "\0020";
+    border-color: #e8e8e8;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .card::after {
+        width: 100%;
+        height: 100%; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .card::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5); } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .card::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333); } }
+  .card span {
+    flex: 1;
+    text-align: right; }
+
+.help {
+  display: flex;
+  height: 0.6rem;
+  background: #fff;
+  flex: 5;
+  position: relative; }
+  .help::after {
+    pointer-events: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    content: "\0020";
+    border-color: #e8e8e8;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+      .help::after {
+        width: 100%;
+        height: 100%; } }
+    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+      .help::after {
+        width: 200%;
+        height: 200%;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5); } }
+    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+      .help::after {
+        width: 300%;
+        height: 300%;
+        -webkit-transform: scale(0.33333);
+        transform: scale(0.33333); } }
+  .help span {
+    flex: 1;
+    text-align: right; }
+    .help span span {
+      font-size: .12rem; }
+
+.mh {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: .499rem;
+  background: red;
+  font-size: .18rem;
+  line-height: .44rem;
+  color: #fff;
+  font-weight: 700; }
+
+.citiesChoose {
+  height: 100%;
+  overflow-y: scroll; }
+  .citiesChoose #letter {
+    width: 1rem;
+    height: 1rem;
+    border-radius: .05rem;
+    font-size: .75rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.00rem;
+    background: rgba(145, 145, 145, 0.6);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -0.5rem .0rem .0rem -.5rem;
+    z-index: 99;
+    display: none; }
+  .citiesChoose .sort_box {
+    width: 100%;
+    height: 100%;
+    padding-top: .45rem;
+    overflow-y: scroll; }
+    .citiesChoose .sort_box .sort_list {
+      padding: .1rem .6rem .1rem .8rem;
+      height: .4rem;
+      line-height: .4rem;
+      position: relative;
+      border-bottom: .01rem solid #ddd; }
+      .citiesChoose .sort_box .sort_list .sort_a {
+        width: 100%;
+        height: 100%;
+        color: #000; }
+        .citiesChoose .sort_box .sort_list .sort_a .sort_list .num_name {
+          color: #000; }
+    .citiesChoose .sort_box .sort_letter {
+      height: .30rem;
+      line-height: .30rem;
+      padding-left: .20rem;
+      color: #787878;
+      font-size: .14rem;
+      border-bottom: .01rem solid #ddd; }
+  .citiesChoose .initials {
+    position: fixed;
+    top: .2rem;
+    right: .05rem;
+    height: 100%;
+    width: .24rem;
+    padding-right: .10rem;
+    text-align: center;
+    font-size: .12rem;
+    z-index: 99;
+    background: rgba(145, 145, 145, 0);
+    text-align: center; }
+    .citiesChoose .initials a {
+      color: black; }
+  .citiesChoose .city-title {
+    padding-left: 15px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .citiesChoose .city-inline {
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    padding-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .citiesChoose .city-inline .city-item {
+      color: black;
+      padding: 0 20px;
+      background: #fff;
+      height: 33px;
+      margin-top: 15px;
+      margin-left: 4%;
+      border: 1px solid #e6e6e6;
+      border-radius: 3px;
+      line-height: 33px;
+      text-align: center; }
+  .citiesChoose .city-inline2 {
+    background-color: #f5f5f5;
+    padding-bottom: 8px;
+    padding-right: 30px;
+    font-size: 14px;
+    color: #333; }
+    .citiesChoose .city-inline2 .sort_b {
+      color: black; }
+    .citiesChoose .city-inline2 .city-item {
+      display: inline-block;
+      width: 30%;
+      padding: 0 20px;
+      background: #fff;
+      height: 33px;
+      margin-top: 15px;
+      margin-left: 5px;
+      border: 1px solid #e6e6e6;
+      border-radius: 3px;
+      line-height: 33px;
+      text-align: center; }
+
+.movhome {
+  background: #293766;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .movhome .movie_box_t {
+    display: flex;
+    position: relative;
+    height: 1.88rem;
+    width: 100%;
+    top: .19rem;
+    left: .15rem;
+    z-index: 3;
+    overflow: hidden; }
+    .movhome .movie_box_t .movie_img img {
+      width: 1.1rem;
+      height: 1.5rem; }
+    .movhome .movie_box_t .movie_cont {
+      width: 2.077rem;
+      height: 1.55rem;
+      margin-left: .125rem;
+      font-size: .12rem;
+      color: #fff;
+      overflow: hidden; }
+      .movhome .movie_box_t .movie_cont .movie_cnm {
+        font-size: .2rem;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 700; }
+      .movhome .movie_box_t .movie_cont .movie_enm {
+        font-size: .12rem;
+        opacity: .6;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .movhome .movie_box_t .movie_cont .movie_cla {
+        font-size: .12rem;
+        opacity: .6;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .movhome .movie_box_t .movie_cont .movie_time {
+        opacity: .6;
+        font-size: .12rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .movhome .movie_box_t .movie_cont .movie_dayrime {
+        opacity: .6;
+        font-size: .12rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .movhome .movie_box_t .movie_cont .ynlook {
+        display: flex;
+        padding: .05rem; }
+        .movhome .movie_box_t .movie_cont .ynlook .wantlook {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.35);
+          box-shadow: 0 0.02rem 0.08rem 0 rgba(0, 0, 0, 0.1);
+          border-radius: .08rem;
+          font-size: .18rem;
+          width: 47.61904762%;
+          height: .2rem;
+          color: #fff; }
+        .movhome .movie_box_t .movie_cont .ynlook .nolook {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: .05rem;
+          background: rgba(255, 255, 255, 0.35);
+          box-shadow: 0 0.02rem 0.08rem 0 rgba(0, 0, 0, 0.1);
+          border-radius: .08rem;
+          font-size: .18rem;
+          width: 47.61904762%;
+          height: .2rem;
+          color: #fff; }
+  .movhome .WOM {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.06rem 0 rgba(255, 255, 255, 0.03);
+    border-radius: .12rem;
+    margin-top: .3rem;
+    padding: .2rem .24rem;
+    overflow: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative; }
+    .movhome .WOM::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #e8e8e8;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .movhome .WOM::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .movhome .WOM::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .movhome .WOM::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+    .movhome .WOM .look-p {
+      text-align: center;
+      position: relative; }
+      .movhome .WOM .look-p .movie_people {
+        width: 100%;
+        font-size: .20rem;
+        font-weight: 700;
+        color: #fc0;
+        margin-top: .11rem; }
+      .movhome .WOM .look-p .look {
+        font-size: .12rem;
+        color: #fff; }
+      .movhome .WOM .look-p::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        content: "\0020";
+        border-color: #e8e8e8;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .movhome .WOM .look-p::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .movhome .WOM .look-p::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .movhome .WOM .look-p::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+    .movhome .WOM .wom {
+      color: #fff;
+      justify-content: space-between;
+      align-items: center; }
+    .movhome .WOM .welcome {
+      padding-top: .02rem;
+      color: #ffe4a2; }
+  .movhome .shichang {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .1rem 0;
+    padding: .15rem;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative; }
+    .movhome .shichang::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #e8e8e8;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .movhome .shichang::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .movhome .shichang::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .movhome .shichang::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+  .movhome .brief {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; }
+    .movhome .brief .jianjie {
+      color: #fff;
+      font-size: .15rem;
+      padding: 0 .15rem;
+      align-items: center; }
+    .movhome .brief .zhengwen {
+      color: #fff;
+      font-size: .15rem;
+      padding: .15rem; }
+    .movhome .brief::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      content: "\0020";
+      border-color: #e8e8e8;
+      border-style: solid;
+      border-width: 0 0 1px 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .movhome .brief::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .movhome .brief::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .movhome .brief::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+  .movhome .juz {
+    color: #fff;
+    font-size: .15rem;
+    padding: 0 .15rem;
+    align-items: center; }
+  .movhome .jutiphoto {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 50px; }
+    .movhome .jutiphoto .ppp {
+      width: 1.4rem;
+      height: .93rem;
+      padding: .05rem; }
+
+.pinglun {
+  background-color: #fff;
+  border-top-left-radius: .2rem;
+  border-top-right-radius: .2rem;
+  overflow: hidden;
+  margin-top: -.24rem;
+  position: relative;
+  border-radius: 50; }
+  .pinglun .pl {
+    display: block;
+    margin-top: .24rem; }
+  .pinglun .geren {
+    padding: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .pinglun .geren h5 {
+      display: block;
+      width: 100%;
+      margin-top: -.1rem; }
+    .pinglun .geren span {
+      font-size: .13rem;
+      color: #333;
+      line-height: .42rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      word-break: break-all;
+      overflow: hidden; }
+
+.searchMain {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 32px; }
+  .searchMain .searchBun {
+    flex: none;
+    position: relative;
+    box-sizing: border-box;
+    height: 32px; }
+    .searchMain .searchBun .sslog {
+      position: absolute;
+      height: 32px;
+      left: 10px;
+      line-height: 32px; }
+    .searchMain .searchBun .ssk {
+      position: absolute;
+      left: 10%;
+      width: 70%;
+      line-height: 160%;
+      border: none;
+      font-size: .18125rem;
+      height: 32px;
+      background-color: transparent; }
+    .searchMain .searchBun .fcancle {
+      position: absolute;
+      right: 10%;
+      padding-left: 4px;
+      font-size: 15px;
+      height: 32px;
+      line-height: 32px; }
+
+.searchcont {
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  top: 8%;
+  height: 100%; }
+  .searchcont h3 {
+    margin-left: 5px; }
+  .searchcont .c_list {
+    list-style: none;
+    margin: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 15px;
+    position: relative; }
+    .searchcont .c_list .searchCinema {
+      background-color: #fff; }
+      .searchcont .c_list .searchCinema .searchsellPrice {
+        font-size: 22px;
+        color: red;
+        white-space: nowrap;
+        margin-left: 10px; }
+        .searchcont .c_list .searchCinema .searchsellPrice .yuan {
+          font-size: 13px;
+          color: #999; }
+    .searchcont .c_list .searchaddr {
+      top: -10%;
+      display: flex;
+      font-size: 13px;
+      color: #999;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+      .searchcont .c_list .searchaddr .addr {
+        top: -10%;
+        flex: 4;
+        font-size: 13px;
+        color: #999;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .searchcont .c_list .searchaddr .searchdistance {
+        flex: 1; }
+    .searchcont .c_list .status .blueBorder1 {
+      border: #589daf solid .001rem;
+      font-size: 13px;
+      color: #589daf;
+      padding: 1px;
+      border-radius: 30; }
+    .searchcont .c_list .status .yellowBorder1 {
+      border: #f90 solid .001rem;
+      font-size: 13px;
+      color: #f90;
+      padding: 1px; }
+
+.selector-mod {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  top: 100px; }
+  .selector-mod .selector-in {
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column; }
+    .selector-mod .selector-in .area-mall-switcher {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 2.5rem;
+      height: 10.66666667vw;
+      padding: 2px;
+      background: transparent linear-gradient(0deg, #ededed, #ededed 50%, transparent 0, transparent 0) 0 100% repeat-x;
+      background-size: 100% 1px; }
+    .selector-mod .selector-in .switcher-item1 {
+      width: 50%;
+      text-align: center; }
+    .selector-mod .selector-in .switcher-item2 {
+      width: 50%;
+      text-align: center; }
+    .selector-mod .selector-in .filter-list-complex {
+      flex: 1;
+      display: flex;
+      font-size: 14px;
+      position: relative; }
+      .selector-mod .selector-in .filter-list-complex .option-list-outer {
+        width: 35%;
+        background: #f5f5f5;
+        overflow-y: auto;
+        max-height: 19.0625rem;
+        max-height: 81.33333333vw; }
+        .selector-mod .selector-in .filter-list-complex .option-list-outer .filter-item-sq {
+          position: relative;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          background: #fff; }
+        .selector-mod .selector-in .filter-list-complex .option-list-outer .active {
+          color: #ff2e62;
+          background: #f5f5f5;
+          border-bottom: none; }
+      .selector-mod .selector-in .filter-list-complex .option-list-inner1 {
+        width: 65%;
+        background: #f5f5f5;
+        overflow-y: auto;
+        max-height: 19.0625rem;
+        max-height: 81.33333333vw;
+        position: absolute;
+        top: 0;
+        left: 35%; }
+        .selector-mod .selector-in .filter-list-complex .option-list-inner1 .filter-item1 {
+          padding-left: 2.66666667vw;
+          padding-right: 4vw;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner1 .filter-item1 p:first-child {
+            flex: 1; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner1 .filter-item1 p {
+            height: 2.5rem;
+            height: 10.66666667vw;
+            line-height: 2.5rem;
+            line-height: 10.66666667vw;
+            vertical-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner1 .filter-item1 .filter-item:before {
+            content: " ";
+            width: 26px;
+            height: 18px;
+            display: inline-block; }
+      .selector-mod .selector-in .filter-list-complex .option-list-outer-dt {
+        width: 35%;
+        background: #f5f5f5;
+        overflow-y: auto;
+        max-height: 19.0625rem;
+        max-height: 81.33333333vw; }
+        .selector-mod .selector-in .filter-list-complex .option-list-outer-dt .filter-item-dt {
+          position: relative;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          background: #fff; }
+        .selector-mod .selector-in .filter-list-complex .option-list-outer-dt .active {
+          color: #ff2e62;
+          background: #f5f5f5;
+          border-bottom: none; }
+      .selector-mod .selector-in .filter-list-complex .option-list-inner2 {
+        width: 65%;
+        background: #f5f5f5;
+        overflow-y: auto;
+        max-height: 19.0625rem;
+        max-height: 81.33333333vw;
+        position: absolute;
+        top: 0;
+        left: 35%; }
+        .selector-mod .selector-in .filter-list-complex .option-list-inner2 .filter-item2-dt {
+          padding-left: 2.66666667vw;
+          padding-right: 4vw;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner2 .filter-item2-dt p:first-child {
+            flex: 1; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner2 .filter-item2-dt p {
+            height: 2.5rem;
+            height: 10.66666667vw;
+            line-height: 2.5rem;
+            line-height: 10.66666667vw;
+            vertical-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          .selector-mod .selector-in .filter-list-complex .option-list-inner2 .filter-item2-dt .filter-item:before {
+            content: " ";
+            width: 26px;
+            height: 18px;
+            display: inline-block; }
+
+.active {
+  color: #ff2e62;
+  background: #f5f5f5;
+  border-bottom: none; }
+
+.selector-mod1 {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  top: 100px; }
+  .selector-mod1 .selector-in {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column; }
+    .selector-mod1 .selector-in .filter-list-complex {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      font-size: 14px; }
+      .selector-mod1 .selector-in .filter-list-complex .list-outer1 {
+        width: 100%;
+        flex: 1;
+        background: #f5f5f5;
+        overflow-y: auto;
+        max-height: 19.0625rem;
+        max-height: 81.33333333vw; }
+        .selector-mod1 .selector-in .filter-list-complex .list-outer1 .CL {
+          position: relative;
+          line-height: 44px;
+          height: 44px;
+          padding: 0 15px 0 26px;
+          border-bottom: 1px solid #e5e5e5;
+          color: #333; }
+          .selector-mod1 .selector-in .filter-list-complex .list-outer1 .CL .brand-name {
+            display: inline-block;
+            width: 85%; }
+          .selector-mod1 .selector-in .filter-list-complex .list-outer1 .CL .brand-count {
+            display: inline-block;
+            text-align: right;
+            font-size: 12px; }
+
+.active {
+  color: #ff2e62;
+  background: #f5f5f5;
+  border-bottom: none; }
+
+.selector-mod2 {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  top: 100px; }
+  .selector-mod2 .selector-in-chara {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column; }
+    .selector-mod2 .selector-in-chara .filter-list-complex {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      font-size: 14px;
+      flex-direction: column; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .specialContent {
+        flex: 1;
+        width: 100%;
+        flex-direction: row; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .specialContent .specialContentLi {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .112rem; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .specialContent .active {
+          color: red;
+          border: 1px solid #b93939; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 {
+        flex: 1;
+        width: 100%;
+        flex-direction: row; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 .tingContent {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .112rem; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .tingContent1 .active {
+          color: red;
+          border: 1px solid #b93939; }
+      .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton {
+        flex: 1;
+        width: 100%;
+        position: relative; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton .clickspecialChong {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .15rem;
+          position: absolute;
+          top: 10px;
+          left: 5px; }
+        .selector-mod2 .selector-in-chara .filter-list-complex .clickspecialButton .clickspecialQue {
+          display: inline-block;
+          width: 20%;
+          height: 30px;
+          padding: 3px 0;
+          margin-right: 3%;
+          margin-top: 10px;
+          line-height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: center;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: .15rem;
+          position: absolute;
+          top: 10px;
+          right: 5px; }
+
+.active {
+  color: #ff2e62;
+  background: #f5f5f5;
+  border-bottom: none; }
