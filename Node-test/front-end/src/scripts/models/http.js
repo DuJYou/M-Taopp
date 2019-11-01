@@ -18,7 +18,9 @@ export default {
         if (token) {
           store.set('token', token)
         }
+        // console.log(result);
         return result
+        
       }
     })
   },
@@ -27,7 +29,6 @@ export default {
     url,
     data={},
     type='POST',
-    
   }) {
     let token = store.get('token')
    return $.ajax({

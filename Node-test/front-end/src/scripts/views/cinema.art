@@ -21,7 +21,7 @@
             <table class="table table-striped table-advance table-hover">
                 <tbody>
                     <tr>
-                            <th><i class="icon_document_alt"></i>编号</th>
+                         <th><i class="icon_document_alt"></i>编号</th>
                         <th><i class="fa fa-home"></i> 影院名称</th>
                         <th><i class="icon_pin_alt"></i> 影院地址</th>
                         <th><i class="icon_mobile"></i> 影院电话</th>

@@ -24,6 +24,7 @@ async function _handleRemoveClick(res, obj) {
   })
   if (result) {
     res.go('/cinema?r=' + (new Date().getTime()))
+    // res.go(req.url+'?r=' + (new Date().getTime()))
   }
 }
 async function _handleSearch(res,keywords) {
@@ -114,7 +115,7 @@ export const updata = async (req, res, next) => {
     }
   })
   httpModel.add({
-    url: 'api/position',
+    url: 'api/cinema',
     type: 'patch',
     data: {
       id

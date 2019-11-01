@@ -14,14 +14,18 @@
           <span class="menu-arrow arrow_carrot-right"></span>
         </a>
       </li>
-      <li class="sub-menu" data-url="movie">
-        <a href="#/movie" class="">
+      <li class="sub-menu" data-url="movieHot">
+        <a href="#/movieHot" class="">
           <i class="icon_document_alt"></i>
           <span>电影管理</span>
           <span class="menu-arrow arrow_carrot-right"></span>
         </a>
         <ul class="sub">
-          <li data-url="movie"><a class="" href="#/movie">正在热映</a></li>
+          <li data-url="movieHot">
+            <a class="" href="#/movieHot">
+              正在热映
+            </a>
+          </li>
           <!-- <li><a class="" href="##">即将上映</a></li> -->
         </ul>
        

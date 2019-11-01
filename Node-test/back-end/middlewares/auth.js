@@ -26,6 +26,8 @@ const isSignin = async function(req, res, next) {
       }
     }
   } else {
+  
+    
     res.render('fail', {
       data: JSON.stringify({
         message: '没有权限.'

@@ -16,17 +16,20 @@ const Cinemas = mongoose.model('cinema', {
     cinemaServe2: String,
     cinemaServe3: String,
 })
-const MovieHost = mongoose.model('movieHost', {
-    // movieName: String,
-    // movieLocation: String,
-    // moviePhone: Number,
-    // movieServe1: String,
-    // movieServe2: String,
-    // movieServe3: String,
+const MovieHot = mongoose.model('movieHot', {
+    movieId: Number,
+    movieName: String,
+    movieSynopsis: String,
+    movieScore: String,
+    movieWatch: String,
+    movieStra: String,
+    movieTime: String,
+    movieNumber: String,
+    movieImg:String,
 })
 
 module.exports = {
     Users,
    Cinemas,
-   MovieHost
+   MovieHot
 }
