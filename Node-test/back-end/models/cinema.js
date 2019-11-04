@@ -6,9 +6,17 @@ const save = (data) => {
 const findOne = async (id) => {
   return await Cinemas.findById(id)
 }
-const findAll = async () => {
-  return await Cinemas.find({}).sort({
-    _id: -1
+const findAll = async ({start,count}) => {
+  
+  let list = await Cinemas.find({}).sort({_id: -1}).limit(~~count).skip(~~start)
+  // console.log(list);
+  let total = await Cinemas.find({}).count()
+  // console.log(total);
+  // console.log(list);
+  
+  return ({
+    list,
+    total
   })
 }
 const updata = async (data) => {

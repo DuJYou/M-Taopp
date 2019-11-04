@@ -35,9 +35,12 @@ router.use((req) => {
     $('#title').html(titleHtml)
 })
 router.route('/index', index)
+
 router.route('/cinema', cinema.list)
 router.route('/cinema_add', cinema.add)
 router.route('/cinema_updata', cinema.updata)
+router.route('/cinema_list/:page', cinema.list)
+
 router.route('/movieHot', movieHot.list)
 router.route('/movieHot_add', movieHot.add)
 router.route('/movieHot_updata', movieHot.updata)

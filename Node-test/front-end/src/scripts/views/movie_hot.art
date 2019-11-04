@@ -34,7 +34,7 @@
           {{each list}}
           <tr>
             <td>{{$index + 1}}</td>
-            <td><img style="width: 100px;height: 100px;" src="http://localhost:3000/uploads/{{$value.movieImg}}"></td>
+            <td><img style="width: 64px;height: 90px;" src="http://localhost:3000/uploads/{{$value.movieImg}}"></td>
             <td>{{$value.movieName}} </td>
             <td>
               <trans oldtip="CinemaLocation" newtip="影院位置"
@@ -79,7 +79,7 @@
         </ul>
       </div>
       {{/if}}
-  </div>
+  <!-- </div> -->
   </section>
 </div>
 </div>

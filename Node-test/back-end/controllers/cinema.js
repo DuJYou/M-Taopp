@@ -1,18 +1,17 @@
 const cinemaModel = require('../models/cinema')
 const findAll = async (req, res, next) => {
   res.set('Content-Type', 'application/json; charset=utf-8')
-  let result = await cinemaModel.findAll()
+  let pageInfo = req.query
+  // console.log(pageInfo);
+  
+  let result = await cinemaModel.findAll(pageInfo)
   if (result) {
     res.render('succ', {
-      data: JSON.stringify({
-        list: result
-      })
+      data: JSON.stringify(result)
     })
   } else {
     res.render('fail', {
-      data: JSON.stringify({
-        list: []
-      })
+      data: JSON.stringify({})
     })
   }
 }

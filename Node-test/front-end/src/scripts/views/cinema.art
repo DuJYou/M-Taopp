@@ -3,25 +3,25 @@
         <section class="panel">
             <header class="panel-heading">
                 影院列表
-             
+
                 <button id="btn-add" class="btn btn-info" title="Bootstrap 3 themes generator "
                     style="padding: 4px 12px;float:right">
                     <span class="icon_plus_alt2"></span>
                     <trans oldtip=" Info" newtip="添加">添加</trans>
                 </button>
-                <ul class="nav top-menu"   style="padding:7px 24px;float:right">
-                        <li style="border: none;">
-                          <form class="navbar-form">
+                <ul class="nav top-menu" style="padding:7px 24px;float:right">
+                    <li style="border: none;">
+                        <form class="navbar-form">
                             <input id="search" class="form-control" placeholder="搜索" type="text">
-                          </form>
-                        </li>
-                      </ul>
+                        </form>
+                    </li>
+                </ul>
             </header>
 
             <table class="table table-striped table-advance table-hover">
                 <tbody>
                     <tr>
-                         <th><i class="icon_document_alt"></i>编号</th>
+                        <th><i class="icon_document_alt"></i>编号</th>
                         <th><i class="fa fa-home"></i> 影院名称</th>
                         <th><i class="icon_pin_alt"></i> 影院地址</th>
                         <th><i class="icon_mobile"></i> 影院电话</th>
@@ -56,17 +56,22 @@
                 </tbody>
 
             </table>
-            <div class="text-center">
-                <ul class="pagination">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">»</a></li>
+            {{if list.length > 0 && from === 'list' }}
+            <div id="box-footer" class="box-footer clearfix text-center">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="javascript:void(0)" class="page-prev">&laquo;</a></li>
+                    {{each pageCount}}
+                    {{if currentPage === $value}}
+                    <li class="active">
+                        {{else}}
+                    <li>
+                        {{/if}}
+                        <a href="javascript:void(0)" class="page-number">{{$value}}</a></li>
+                    {{/each}}
+                    <li><a href="javascript:void(0)" class="page-next">&raquo;</a></li>
                 </ul>
             </div>
+            {{/if}}
         </section>
     </div>
 </div>

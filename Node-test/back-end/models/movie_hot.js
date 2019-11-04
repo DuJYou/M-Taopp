@@ -1,6 +1,4 @@
-const {
-  MovieHot
-} = require('../utils/db')
+const { MovieHot} = require('../utils/db')
 const save = (data) => {
   // console.log(data);
   const movieHot = new MovieHot(data)

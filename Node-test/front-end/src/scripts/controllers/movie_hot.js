@@ -68,6 +68,8 @@ async function _handleSearch(res, keywords) {
 }
 export const list = async (req, res, next) => {
   let currentPage = ~~req.params.page || 1
+  // console.log(currentPage);
+  
   let result = await httpModel.get({
     url: '/api/movieHot',
     data: {
@@ -80,10 +82,9 @@ export const list = async (req, res, next) => {
     return
   }
   let pageCount = _.range(1, Math.ceil(result.data.total / count) + 1)
+  
   if (result.ret) {
-    let {
-      list
-    } = result.data
+    let {list} = result.data
     res.render(movieHotView({
       list,
       pageCount,
@@ -105,12 +106,7 @@ export const list = async (req, res, next) => {
   //查询
   $('body').on('keyup', '#Msearch', (e) => {
     // $('#Msearch').on('click',(e)=>{
-
-    
     if (e.keyCode === 13) {
-      console.log(res);
-      console.log(e.target.value);
-      
       _handleSearch(res, e.target.value)
     }
   })
