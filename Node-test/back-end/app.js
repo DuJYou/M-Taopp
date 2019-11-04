@@ -43,7 +43,6 @@ app.use(cookieSession({
 //两个路由
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
-// app.use('/api/cinema', cinemaRouter)
 app.use('/api/cinema', authMiddleware, cinemaRouter)
 app.use('/api/movieHot', authMiddleware, movieHotRouter)
 

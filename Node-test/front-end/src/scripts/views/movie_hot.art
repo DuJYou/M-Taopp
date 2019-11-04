@@ -36,10 +36,12 @@
             <td>{{$index + 1}}</td>
             <td><img style="width: 100px;height: 100px;" src="http://localhost:3000/uploads/{{$value.movieImg}}"></td>
             <td>{{$value.movieName}} </td>
-            <td> 
-                <trans oldtip="CinemaLocation" newtip="影院位置"  style="display: inline-block;width: 60px;white-space:nowrap;overflow:hidden; text-overflow: ellipsis;height:100%;line-height:100%;">{{$value.movieSynopsis}}</trans>
-              </td>
-   
+            <td>
+              <trans oldtip="CinemaLocation" newtip="影院位置"
+                style="display: inline-block;width: 60px;white-space:nowrap;overflow:hidden; text-overflow: ellipsis;height:100%;line-height:100%;">
+                {{$value.movieSynopsis}}</trans>
+            </td>
+
             <td>{{$value.movieScore}}</td>
             <td>{{$value.movieWatch}}</td>
             <td>{{$value.movieStra}}</td>
@@ -48,11 +50,12 @@
             <td>
               <div class="btn-group">
                 <!-- <i class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a> -->
-                <button  data-id="{{$value._id}}" type="button" class="btn btn-success btn-mupdata">
+                <button data-id="{{$value._id}}" type="button" class="btn btn-success btn-mupdata">
                   <span class="icon_check_alt2"></span>
                   <trans oldtip="Submit" newtip="修改">修改</trans>
                 </button>
-                <button  data-id="{{$value._id}}"  type="button" class="btn btn-danger btn-mremove">
+                <button data-id="{{$value._id}}" data-img={{$value.movieImg}} type="button"
+                  class="btn btn-danger btn-mremove">
                   <span class="icon_close_alt2"></span>删除</button>
               </div>
             </td>
@@ -60,17 +63,23 @@
           {{/each}}
         </tbody>
       </table>
-      <div class="text-center">
-        <ul class="pagination">
-          <li><a href="#">«</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">»</a></li>
+      {{if list.length > 0 && from === 'list' }}
+      <div id="box-footer" class="box-footer clearfix text-center">
+        <ul class="pagination pagination-sm no-margin pull-right">
+          <li><a href="javascript:void(0)" class="page-prev">&laquo;</a></li>
+          {{each pageCount}}
+          {{if currentPage === $value}}
+          <li class="active">
+            {{else}}
+          <li>
+            {{/if}}
+            <a href="javascript:void(0)" class="page-number">{{$value}}</a></li>
+          {{/each}}
+          <li><a href="javascript:void(0)" class="page-next">&raquo;</a></li>
         </ul>
       </div>
-    </section>
+      {{/if}}
   </div>
+  </section>
+</div>
 </div>

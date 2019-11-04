@@ -1,10 +1,6 @@
 import store from 'store'
 export default {
-  get({
-    url,
-    type = 'GET',
-    data = {}
-  }) {
+  get({url,type = 'GET',data = {}}) {
     let token = store.get('token')
     return $.ajax({
       url,
@@ -18,20 +14,14 @@ export default {
         if (token) {
           store.set('token', token)
         }
-        // console.log(result);
         return result
         
       }
     })
   },
-
-  add({
-    url,
-    data={},
-    type='POST',
-  }) {
+  add({ url,data={},type='POST',}) {
     let token = store.get('token')
-   return $.ajax({
+    return $.ajax({
       url,
       data,
       type,

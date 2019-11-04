@@ -41,6 +41,7 @@ router.route('/cinema_updata', cinema.updata)
 router.route('/movieHot', movieHot.list)
 router.route('/movieHot_add', movieHot.add)
 router.route('/movieHot_updata', movieHot.updata)
+router.route('/movieHot_list/:page', movieHot.list)
 //初始
 router.route('*', (req, res, next) => {
     res.redirect('/index', index)

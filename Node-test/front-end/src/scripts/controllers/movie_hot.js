@@ -2,56 +2,93 @@ import movieHotView from '../views/movie_hot.art'
 import movieHotUpdataView from '../views/movie_hot_updata.art'
 import movieHotAddView from '../views/movie_hot_add.art'
 import httpModel from '../models/http'
+import _ from 'lodash'
 import store from 'store'
-
+let count = 2
 function _handleAddClick(res) {
   $('#btn-Movieadd').on('click', () => {
     res.go('/movieHot_add')
   })
 }
-
 function _handleUpdateClick(res, obj) {
   let id = $(obj).attr('data-id')
   res.go('/movieHot_updata', {
     id
   })
 }
-async function _handleRemoveClick(res, obj) {
+function _handlePageNumberClick(req, res, obj, type, pageCount) {
+  // list(req, res, next, ~~$(obj).text())
+  if (type) {
+    let page = ~~req.params.page
+    if (type === 'prev' && page > 1) {
+      res.go('/movieHot_list/' + (page - 1))
+    } else if (type === 'next' && page < pageCount.length) {
+      res.go('/movieHot_list/' + (page + 1))
+    }
+  } else {
+    res.go('/movieHot_list/' + ~~$(obj).text())
+  }
+}
+async function _handleRemoveClick(req, res, obj) {
   let id = $(obj).attr('data-id')
+  let tempMovieImg = $(obj).attr('data-img')
+  // console.log(tempMovieImg);
   let result = await httpModel.add({
     url: '/api/movieHot',
     type: 'delete',
     data: {
-      id
+      id,
+      tempMovieImg
     }
   })
-  if (result) {
-    res.go('/movieHot?r=' + (new Date().getTime()))
-    // res.go(req.url+'?r=' + (new Date().getTime()))
+  // console.log(result.ret);
+  if (result.ret) {
+    res.go('/movieHot_list/' + (req.params.page || 1) + '?r=' + (new Date().getTime()))
   }
 }
 async function _handleSearch(res, keywords) {
+  if (keywords === '') {
+    res.go('/movieHot_list/1' + '?r=' + new Date().getTime())
+    return
+  }
   let result = await httpModel.add({
     url: '/api/movieHot/search',
     data: {
       keywords
     }
   })
+  
+  
   if (result.ret) {
     res.render(movieHotView({
-      list: result.data.list
+      list: result.data.list,
+      from: 'search'
     }))
-  } else {
-    res.go('/movieHot')
   }
 }
 export const list = async (req, res, next) => {
+  let currentPage = ~~req.params.page || 1
   let result = await httpModel.get({
-    url: '/api/movieHot'
+    url: '/api/movieHot',
+    data: {
+      start: (currentPage - 1) * count,
+      count
+    }
   })
+  if (result.data.list.length === 0 && currentPage > 1) {
+    res.go('/movieHot_list/' + (currentPage - 1))
+    return
+  }
+  let pageCount = _.range(1, Math.ceil(result.data.total / count) + 1)
   if (result.ret) {
+    let {
+      list
+    } = result.data
     res.render(movieHotView({
-      list: result.data.list
+      list,
+      pageCount,
+      currentPage,
+      from: 'list'
     }))
     _handleAddClick(res)
   } else {
@@ -63,36 +100,61 @@ export const list = async (req, res, next) => {
   })
   //删除
   $('.btn-mremove').on('click', function () {
-    _handleRemoveClick(res, this)
+    _handleRemoveClick(req, res, this)
   })
   //查询
   $('body').on('keyup', '#Msearch', (e) => {
+    // $('#Msearch').on('click',(e)=>{
+
+    
     if (e.keyCode === 13) {
-      // console.log(1);
+      console.log(res);
+      console.log(e.target.value);
+      
       _handleSearch(res, e.target.value)
     }
+  })
+
+  $('#box-footer a.page-number').on('click', function () {
+    _handlePageNumberClick(req, res, this)
+  })
+
+  $('#box-footer a.page-prev').on('click', function () {
+    _handlePageNumberClick(req, res, this, 'prev')
+  })
+
+  $('#box-footer a.page-next').on('click', function () {
+    _handlePageNumberClick(req, res, this, 'next', pageCount)
   })
 }
 export const add = async (req, res, next) => {
   res.render(movieHotAddView())
-
   let token = store.get('token')
+  console.log(res);
+  let j = $('input').length
+
   $('#movie-form').ajaxForm({
-    restForm: true,
     headers: {
       'X-Access-Token': token
+    },
+    restForm: true,
+    success: (result) => {
+      if (result.ret) {
+        for (let i = 0; i < j; i++) {
+          $('input').eq(i).val('')
+        }
+      } else {
+        alert(result.data.message)
+      }
     }
-    
-
   })
+  //返回
   $('#movieadd-back').on('click', () => {
     res.go('/movieHot')
   })
 }
 export const updata = async (req, res, next) => {
   let id = req.body.id
-  // console.log(id);
-
   let result = await httpModel.get({
     url: '/api/movieHot/findOne',
     data: {
@@ -102,28 +164,23 @@ export const updata = async (req, res, next) => {
   res.render(movieHotUpdataView({
     item: result.data
   }))
-  $('#moviedit-submit').on('click', async () => {
-    let $form = $('#movie-form')
-    let data = $form.serialize()
-    let result = await httpModel.add({
-      url: '/api/movieHot',
-      data: data + '&id=' + id,
-      type: 'patch'
-    })
-    if (result.ret) {
-      res.go('/movieHot')
-    } else {
-      alert(result.data.message)
-    }
-  })
-  httpModel.add({
-    url: 'api/movieHot',
-    type: 'patch',
-    data: {
-      id
+  let token = store.get('token')
+  $('#movie-form').ajaxForm({
+    headers: {
+      'X-Access-Token': token
+    },
+    restForm: true,
+    dataType: 'json',
+    url: 'api/movieHot/updata',
+    success: (result) => {
+      if (result.ret) {
+        res.back()
+      } else {
+        alert(result.data.message)
+      }
     }
   })
   $('#moviedit-back').on('click', () => {
-    res.go('/movieHot')
+    res.back()
   })
 }

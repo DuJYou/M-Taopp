@@ -17,7 +17,7 @@ const Cinemas = mongoose.model('cinema', {
     cinemaServe3: String,
 })
 const MovieHot = mongoose.model('movieHot', {
-    movieId: Number,
+    movieId: String,
     movieName: String,
     movieSynopsis: String,
     movieScore: String,
