@@ -7,7 +7,7 @@
             <form  role="form"
             method="post"
             id="movie-form"
-            action="/api/movieHot" 
+            action="/api/movieUpcoming" 
             enctype="multipart/form-data"><div class="form-group">
                     <label for="exampleInputEmail1">
                         <trans oldtip="MovieId" newtip="电影ID">电影ID</trans>

@@ -14,8 +14,8 @@
           <span class="menu-arrow arrow_carrot-right"></span>
         </a>
       </li>
-      <li class="sub-menu" data-url="movieHot">
-        <a href="#/movieHot" class="">
+      <li class="sub-menu" data-url="movie">
+        <a href="#/movie" class="">
           <i class="icon_document_alt"></i>
           <span>电影管理</span>
           <span class="menu-arrow arrow_carrot-right"></span>
@@ -26,9 +26,20 @@
               正在热映
             </a>
           </li>
-          <!-- <li><a class="" href="##">即将上映</a></li> -->
+          <li data-url="movieUpcoming">
+            <a class="" href="#/movieUpcoming">
+              即将上映
+            </a>
+          </li>
         </ul>
        
+      </li>
+      <li class="sub-menu" data-url="chat">
+        <a href="#/chat" class="">
+          <i class="fa fa-comments fa-2x"></i>
+          <span>用户交流</span>
+          <span class="menu-arrow arrow_carrot-right"></span>
+        </a>
       </li>
       <!-- <li class="sub-menu">
         <a href="javascript:;" class="">

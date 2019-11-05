@@ -27,9 +27,21 @@ const MovieHot = mongoose.model('movieHot', {
     movieNumber: String,
     movieImg:String,
 })
+const MovieUpcoming = mongoose.model('movieUpcoming', {
+    movieId: String,
+    movieName: String,
+    movieSynopsis: String,
+    movieScore: String,
+    movieWatch: String,
+    movieStra: String,
+    movieTime: String,
+    movieNumber: String,
+    movieImg:String,
+})
 
 module.exports = {
     Users,
    Cinemas,
-   MovieHot
+   MovieHot,
+   MovieUpcoming
 }

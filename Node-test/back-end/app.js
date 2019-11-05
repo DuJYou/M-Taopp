@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cinemaRouter = require('./routes/cinema');
 var movieHotRouter = require('./routes/movie_hot');
+var movieUpcomingRouter = require('./routes/movie_upcoming');
 const authMiddleware = require('./middlewares/auth')
 var app = express();
 
@@ -45,6 +46,7 @@ app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/cinema', authMiddleware, cinemaRouter)
 app.use('/api/movieHot', authMiddleware, movieHotRouter)
+app.use('/api/movieUpcoming', authMiddleware, movieUpcomingRouter)
 
 // catch 404 and forward to error handler
 // 捕获404并转发给错误处理程序

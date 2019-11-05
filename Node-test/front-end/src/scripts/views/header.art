@@ -5,17 +5,17 @@
   <!--logo start-->
   <a href="index.html" class="logo">淘票票<span class="lite">后台管理系统</span></a>
   <!--logo end-->
-  <div class="nav search-row" id="top_menu">
+  <!-- <div class="nav search-row" id="top_menu"> -->
     <!--  search form start -->
-    <ul class="nav top-menu">
+    <!-- <ul class="nav top-menu">
       <li>
         <form class="navbar-form">
           <input class="form-control" placeholder="Search" type="text">
         </form>
       </li>
-    </ul>
+    </ul> -->
     <!--  search form end -->
-  </div>
+  <!-- </div> -->
 
   <div class="top-nav notification-row">
     <!-- notificatoin dropdown start-->
@@ -256,9 +256,9 @@
             <a id="loginout"><i class="icon_key_alt"></i>注销</a>
           </li>
           {{/if}}
-          <li>
+          <!-- <li>
             <a href="documentation.html"><i class="icon_key_alt"></i> 文献资料</a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <!-- user login dropdown end -->

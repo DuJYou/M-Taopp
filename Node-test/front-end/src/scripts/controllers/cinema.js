@@ -78,13 +78,11 @@ export const list = async (req, res, next) => {
     }
   }) 
   // console.log(count);y
-  
   if (result.data.list.length === 0 && currentPage > 1) {
     res.go('/cinema_list/' + (currentPage - 1))
     return
   }
   let pageCount = _.range(1, Math.ceil(result.data.total / count) + 1)
-  
   if (result.ret) {
     let {list} = result.data
     console.log(currentPage);

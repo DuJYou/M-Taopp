@@ -1,18 +1,20 @@
-import movieHotView from '../views/movie_hot.art'
-import movieHotUpdataView from '../views/movie_hot_updata.art'
-import movieHotAddView from '../views/movie_hot_add.art'
+import movieUpcomingView from '../views/movie_Upcoming.art'
+import movieUpcomingUpdataView from '../views/movie_Upcoming_updata.art'
+import movieUpcomingAddView from '../views/movie_Upcoming_add.art'
 import httpModel from '../models/http'
 import _ from 'lodash'
 import store from 'store'
 let count = 2
 function _handleAddClick(res) {
-  $('#btn-MovieHotAdd').on('click', () => {
-    res.go('/movieHot_add')
+  $('#btn-MovieUpcomingAdd').on('click', () => {
+  console.log(1);
+  
+    res.go('/movieUpcoming_add')
   })
 }
 function _handleUpdateClick(res, obj) {
   let id = $(obj).attr('data-id')
-  res.go('/movieHot_updata', {
+  res.go('/movieUpcoming_updata', {
     id
   })
 }
@@ -21,12 +23,12 @@ function _handlePageNumberClick(req, res, obj, type, pageCount) {
   if (type) {
     let page = ~~req.params.page
     if (type === 'prev' && page > 1) {
-      res.go('/movieHot_list/' + (page - 1))
+      res.go('/movieUpcoming_list/' + (page - 1))
     } else if (type === 'next' && page < pageCount.length) {
-      res.go('/movieHot_list/' + (page + 1))
+      res.go('/movieUpcoming_list/' + (page + 1))
     }
   } else {
-    res.go('/movieHot_list/' + ~~$(obj).text())
+    res.go('/movieUpcoming_list/' + ~~$(obj).text())
   }
 }
 async function _handleRemoveClick(req, res, obj) {
@@ -34,7 +36,7 @@ async function _handleRemoveClick(req, res, obj) {
   let tempMovieImg = $(obj).attr('data-img')
   // console.log(tempMovieImg);
   let result = await httpModel.add({
-    url: '/api/movieHot',
+    url: '/api/movieUpcoming',
     type: 'delete',
     data: {
       id,
@@ -43,16 +45,16 @@ async function _handleRemoveClick(req, res, obj) {
   })
   // console.log(result.ret);
   if (result.ret) {
-    res.go('/movieHot_list/' + (req.params.page || 1) + '?r=' + (new Date().getTime()))
+    res.go('/movieUpcoming_list/' + (req.params.page || 1) + '?r=' + (new Date().getTime()))
   }
 }
 async function _handleSearch(res, keywords) {
   if  (keywords === '') {
-    await   res.go('/movieHot_list/1' + '?r=' + new Date().getTime())
+    await   res.go('/movieUpcoming_list/1' + '?r=' + new Date().getTime())
     return
   }
   let result = await httpModel.add({
-    url: '/api/movieHot/search',
+    url: '/api/movieUpcoming/search',
     data: {
       keywords
     }
@@ -60,7 +62,7 @@ async function _handleSearch(res, keywords) {
   
   
   if (result.ret) {
-    res.render(movieHotView({
+    res.render(movieUpcomingView({
       list: result.data.list,
       from: 'search'
     }))
@@ -71,21 +73,21 @@ export const list = async (req, res, next) => {
   // console.log(currentPage);
   
   let result = await httpModel.get({
-    url: '/api/movieHot',
+    url: '/api/movieUpcoming',
     data: {
       start: (currentPage - 1) * count,
       count
     }
   })
   if (result.data.list.length === 0 && currentPage > 1) {
-    res.go('/movieHot_list/' + (currentPage - 1))
+    res.go('/movieUpcoming_list/' + (currentPage - 1))
     return
   }
   let pageCount = _.range(1, Math.ceil(result.data.total / count) + 1)
   
   if (result.ret) {
     let {list} = result.data
-    res.render(movieHotView({
+    res.render(movieUpcomingView({
       list,
       pageCount,
       currentPage,
@@ -124,7 +126,7 @@ export const list = async (req, res, next) => {
   })
 }
 export const add = async (req, res, next) => {
-  res.render(movieHotAddView())
+  res.render(movieUpcomingAddView())
   let token = store.get('token')
   console.log(res);
   let j = $('input').length
@@ -146,18 +148,18 @@ export const add = async (req, res, next) => {
   })
   //返回
   $('#movieadd-back').on('click', () => {
-    res.go('/movieHot')
+    res.go('/movieUpcoming')
   })
 }
 export const updata = async (req, res, next) => {
   let id = req.body.id
   let result = await httpModel.get({
-    url: '/api/movieHot/findOne',
+    url: '/api/movieUpcoming/findOne',
     data: {
       id
     }
   })
-  res.render(movieHotUpdataView({
+  res.render(movieUpcomingUpdataView({
     item: result.data
   }))
   let token = store.get('token')
@@ -167,7 +169,7 @@ export const updata = async (req, res, next) => {
     },
     restForm: true,
     dataType: 'json',
-    url: 'api/movieHot/updata',
+    url: 'api/movieUpcoming/updata',
     success: (result) => {
       if (result.ret) {
         res.back()
