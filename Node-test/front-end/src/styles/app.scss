@@ -252,3 +252,31 @@
 .chat_content li span.spanright {
   float: right;
 }
+
+.chat_list {
+  list-style: none;
+  height: 25px;
+}
+
+.left {
+  display: block;
+  float: left;
+  margin: 10px 20px;
+  background: #bbb;
+  color: #1c1f21;
+  border: 1px solid #bbb;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.right {
+  display: block;
+  margin: 10px 20px;
+  float: right;
+  overflow: hidden;
+  list-style: none;
+  background: #bbb;
+  color: #1c1f21;
+  border: 1px solid #bbb;
+  border-radius: 10%;
+}
