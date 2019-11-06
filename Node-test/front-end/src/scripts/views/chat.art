@@ -1,13 +1,9 @@
-<div class="all">
+<!-- <div class="all">
     <div class="chat_index">
-        <!--banner-->
-
         <div class="chat_body">
-            <!--在线列表-->
-            <!--聊天界面-->
             <div class="chat_main">
                 <div class="chat_div">
-                    <ul id="chat_ul" class="chat_content">
+                    <ul id="content" class="chat_content">
 
                     </ul>
 
@@ -15,16 +11,22 @@
 
                 <div class="send_message">
                     <form>
-                        <input type="text" placeholder="请输入消息" id="send_txt">
-                        <input type="button" value="send" id="send_btn">
+                        <input type="text" placeholder="请输入消息" id="msg">
+                        <input type="submit" value="send" id="submit">
                     </form>
                 </div>
             </div>
-            <!--名片-->
             <div class="chat_namecard">
-
             </div>
         </div>
 
     </div>
-</div>
+</div> -->
+  <div class="col-md-5 col-md-offset-3">
+    <h1 style="text-align: center;">匿名自嗨交流区</h1>
+    <div id="content" name="name"  style="overflow-y: scroll; width: 100%; height: 300px; border: solid 1px #000; "></div>
+    <br />
+    <div>
+      <input type="text" id="msg" style="width: 100%;height: 40px;">
+    </div>
+    <button id="submit" style="width: 100%;">提交</button></div>

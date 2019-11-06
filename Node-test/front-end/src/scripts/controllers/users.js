@@ -18,7 +18,7 @@ class Users {
     $('#btn-signin, #btn-signup').on('click', function () {
       that.type = $(this).attr('id')
     })
-    console.log(that.type);
+    // console.log(that.type);
     
     //提交
     $('#btn-signin, #btn-signup').on('click', this.handleSubmit.bind(this))
